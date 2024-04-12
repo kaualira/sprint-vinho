@@ -1,0 +1,14 @@
+function TextoAbertura () {
+    return (
+        <>
+        <div className="blocotexto">
+            <div className="linhabranca1"></div>
+            <h1 className="bemvindo">BEM VINDO!</h1>
+            <div className='linhadourada2'></div>
+            <p className="bemvindop">Para qual propósito deseja nos visitar?</p>
+        </div>
+        </>
+    )
+}
+
+export default TextoAbertura;

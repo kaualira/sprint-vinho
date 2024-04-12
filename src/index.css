@@ -6,6 +6,117 @@ body {
 }
 
 .fundo {
+  position: fixed;
   width: 100%;
   height: 100vh;
+  z-index: 1;
+}
+
+.blocologo {
+  position: relative;
+  width: 100%;
+  height: 25vh;
+  /* background-color: rgb(2, 255, 234); */
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.linhabranca1 {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  /* background-color: rgb(255, 0, 0); */
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+}
+
+.linhadourada1 {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #FDC14C;
+  z-index: 3;
+}
+
+.logo {
+  position: relative;
+  width: 300px;
+  z-index: 3;
+  display: flex;
+  
+}
+
+/* bloco texto  */
+
+.blocotexto {
+  width: 100%;
+  height: 120px;
+  /* background-color: aqua; */
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bemvindo {
+  color: white;
+  font-size: 55px;
+  font-family: "Italiana", sans-serif;
+  font-weight: 200;
+}
+
+.bemvindop {
+  color: white;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.linhadourada2 {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  /* background-color: #FDC14C; */
+  z-index: 3;
+}
+
+/* bloco botoes  */
+
+.blocobotoes {
+  width: 100%;
+  height: 50vh;
+  background-color: aqua;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.botao1 {
+  width: 400px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+  z-index: 3;
+}
+
+.botao2 {
+  width: 400px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+  z-index: 3;
+}
+
+.pessoa {
+  width: 400px;
+  height: 200px;
+  z-index: 4;
+  position: relative;
 }

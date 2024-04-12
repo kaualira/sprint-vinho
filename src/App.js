@@ -1,10 +1,15 @@
 import './App.module.css';
 import React from 'react';
+import Cabecalho from './components/Cabecalho';
+import TextoAbertura from './components/TextoAbertura';
+import Botoes from './components/Botoes';
 
 function App() {
   return (
     <div>
-      <img src='/0fundo.png' alt='fundo' className='fundo'/>
+      <Cabecalho />
+      <TextoAbertura />
+      <Botoes />
     </div>
   );
 }
