@@ -90,7 +90,7 @@ body {
 .blocobotoes {
   width: 100%;
   height: 50vh;
-  background-color: aqua;
+  /* background-color: aqua; */
   z-index: 2;
   position: relative;
   display: flex;
@@ -101,22 +101,44 @@ body {
 .botao1 {
   width: 400px;
   height: 200px;
-  background-color: red;
+  /* background-color: red; */
   position: relative;
   z-index: 3;
+}
+
+.empresa {
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  position: relative;
+  border-radius: 25px;
+  transition: 1s;
+  transition-property: transform;
+}
+
+.empresa:hover {
+  transform: translateY(-10px);
 }
 
 .botao2 {
   width: 400px;
   height: 200px;
-  background-color: red;
+  /* background-color: red; */
   position: relative;
   z-index: 3;
 }
 
 .pessoa {
-  width: 400px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   z-index: 4;
   position: relative;
+  border-radius: 25px;
+  transition: 1s;
+  transition-property: transform;
+  
+}
+
+.pessoa:hover {
+  transform: translateY(-10px);
 }

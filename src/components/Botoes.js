@@ -3,10 +3,10 @@ function Botoes () {
         <>
         <div className="blocobotoes">
             <div className="botao1">
-
+                <img src='imgs/Empresa.png' alt='empresa' className='empresa'/>
             </div>
             <div className="botao2">
-                <img src='imgs/pessoa1.0.jpg' alt='pessoa' className='pessoa'/>
+                <img src='imgs/Pessoa.png' alt='pessoa' className='pessoa'/>
             </div>
         </div>
         </>
