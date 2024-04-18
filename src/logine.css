@@ -3,3 +3,23 @@
     border: 0;
     padding: 0;
 }
+
+.blocofundo {
+    width: 100%;
+    height: 75vh;
+    background-color: aqua;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blocologin {
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    position: relative;
+    z-index: 2;
+    
+}
