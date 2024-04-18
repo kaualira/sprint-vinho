@@ -1,4 +1,4 @@
-import './index.css';
+import './index1.css';
 import React from 'react';
 import Cabecalho from './components/Cabecalho';
 import TextoAbertura from './components/TextoAbertura';
@@ -8,9 +8,9 @@ import Botoes from './components/Botoes';
 function App() {
   return (
     <div>
-      <Cabecalho />
-      <TextoAbertura />
-      <Botoes />
+        <Cabecalho />
+        <TextoAbertura />
+        <Botoes />
     </div>
   );
 }
