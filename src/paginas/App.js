@@ -1,4 +1,4 @@
-import './index.css';
+import './paginas/index.css';
 import React from 'react';
 import Cabecalho from './components/Cabecalho';
 import TextoAbertura from './components/TextoAbertura';
