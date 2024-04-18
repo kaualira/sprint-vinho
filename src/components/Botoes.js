@@ -1,5 +1,7 @@
-import React from 'react'
-
+import React from 'react';
+// import { Link,Route } from 'react-router-dom';
+// import LogE from '../LogE';
+// import Switch from 'react-switch';
 
 function Botoes () {
     return (
