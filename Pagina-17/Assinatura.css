@@ -1,0 +1,89 @@
+*{ 
+    background-color: #E5D6CB;
+}
+/* 1 */
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+.tituloAss{
+   display: flex; 
+   /* flex-direction: row; */
+   /* justify-content: center; */
+   align-items: center;
+
+}
+
+.a01{
+/* margin-top: 60px; */
+background-color: #442C0F;
+width: 45%;
+height: 2px;    
+}
+
+.a02{
+align-items: center;
+font-family: "Italiana", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 40px;
+color: #442C0F;
+}
+
+.a03{
+   /* margin-top: 60px; */
+background-color: #442C0F;
+width: 45%;
+height: 2px;
+}
+
+/* 2 */
+.texto1Assinatura{
+   color:rgb(0, 0, 0);
+   right: 50%;
+   height: 50%;
+   margin-top: 6%;
+   margin-left: 20%;
+   margin-right: 20%;
+
+   font-family: "Poppins", sans-serif;
+ font-weight: 300;
+ font-style: normal;
+}
+.texto1Assinatura p{
+   align-items: justify;
+ }
+
+.texto2Ass{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.buttonAss {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.buttonAss button{
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    color: #E5D6CB;
+    background-color: #442C0F;
+    padding: 5px 15px;
+    border-radius: 5px;
+   
+} 
