@@ -1,7 +1,13 @@
 import React from 'react';
-// import { Link,Route } from 'react-router-dom';
+// import { Link,Route, Routes } from 'react-router-dom';
 // import LogE from '../LogE';
 // import Switch from 'react-switch';
+// import Logine from './Logine';
+
+// import './style.css';
+
+// import { Container } from './styles';
+
 
 function Botoes () {
     return (
