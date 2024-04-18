@@ -2,7 +2,7 @@
 function Cabecalho () {
     return (
     <>
-    <img src='./Pagina_1/LogoSemLinha.png' alt='fundo' className='fundo'/>
+    <img src='./sprint-vinho/Imagens/Pagina_1/LogoSemLinha.png' alt='fundo' className='fundo'/>
     <div className='blocologo'>
         <div className='linhabranca1'></div>
         <div className='linhadourada1'></div>
