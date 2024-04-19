@@ -21,7 +21,7 @@ function BlocoLoginE () {
 
                     </div>
                     <div className='dados3'>
-                        <Link to="/"><p className='p3'>ENTRAR</p></Link>
+                        <Link to="/HomeP"><p className='p3'>ENTRAR</p></Link>
                         <div className='linhadourada'></div>
                     </div>
                 </div>
