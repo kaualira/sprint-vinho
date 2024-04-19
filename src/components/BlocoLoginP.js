@@ -48,11 +48,14 @@ function BlocoLoginP () {
 
                     </div>
                     <div className='dados3'>
+
                     <div className='forms6' >
                         <h2> Senha:</h2>
                         <input name='senha' type='text' class='forms66'/>
                         </div>
-                        <Link to="/"><p className='p3'>ENTRAR</p></Link>
+
+                        <Link to="/HomeP"><p className='p3'>ENTRAR</p></Link>
+
                         <div className='linhadourada'></div>
                     </div>
                 </div>
