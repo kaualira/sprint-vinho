@@ -6,6 +6,7 @@ import Botoes from './components/Botoes';
 import { Routes, Route } from 'react-router-dom';
 import LogE from './LogE';
 import LogP from './LogP';
+import LogF from './LogF';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<><Cabecalho /><TextoAbertura/><Botoes/></>}/>
           <Route path="/Login" element={<><LogE /></>}/>
           <Route path="/LoginP" element={<><LogP /></>}/>
+          <Route path="/LoginF" element={<><LogF /></>}/>
         </Routes>
     </div>
   );
