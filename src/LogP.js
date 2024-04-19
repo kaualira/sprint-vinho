@@ -1,17 +1,17 @@
 import React from 'react';
-import './logine.css';
+import './loginp.css';
 import Cabecalho from './components/Cabecalho';
-import BlocoLoginE from './components/BlocoLoginE';
+// import BlocoLoginE from './components/BlocoLoginE';
 import { Routes, Route } from 'react-router-dom';
 
-function LogE() {
+function LogP() {
     return (
       <div>
         <Routes>
-          <Route path="/" element={<><Cabecalho /><BlocoLoginE/></>}/>
+          <Route path="/LoginP" element={<><Cabecalho /></>}/>
         </Routes>
       </div>
     );
   }
   
-  export default LogE;
+  export default LogP;
