@@ -1,14 +1,14 @@
 import React from 'react';
 import './logine.css';
 import Cabecalho from './components/Cabecalho';
-import BlocoLoginE from './components/BlocoLoginE';
+import BlocoLoginP from './components/BlocoLoginP';
 import { Routes, Route } from 'react-router-dom';
 
 function LogE() {
     return (
       <div>
         <Routes>
-          <Route path="/" element={<><Cabecalho /><BlocoLoginE/></>}/>
+          <Route path="/" element={<><Cabecalho /><BlocoLoginP /></>}/>
         </Routes>
       </div>
     );

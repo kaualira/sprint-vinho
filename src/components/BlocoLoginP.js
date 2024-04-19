@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function BlocoLoginE () {
+function BlocoLoginP () {
     return (
         <div className='blocofundo'>
             <div className='blocologin'>
                 <div className='facacadastro'>
-                    <img src='Imagens/Pagina_2/predio.png' alt='' className='prediozinho'/>
-                    <p className='p1'>Faça o cadastro de </p>
-                    <p className='p1'>sua empresa</p>
+                    <img src='Imagens/Pagina_3/pessoa.png' alt='' className='pessoinha'/>
+                    <p className='p1'>Faça seu </p>
+                    <p className='p1'>cadastro pessoal</p>
                     <p className='p2'>Já está cadastrado em</p>
                     <p className='p2'>nosso sistema?</p>
                     <Link to="/"><p className='p3'>ENTRE AQUI!</p></Link>
@@ -30,4 +30,4 @@ function BlocoLoginE () {
     )
 }
 
-export default BlocoLoginE;
+export default BlocoLoginP;

@@ -5,6 +5,7 @@ import TextoAbertura from './components/TextoAbertura';
 import Botoes from './components/Botoes';
 import { Routes, Route } from 'react-router-dom';
 import LogE from './LogE';
+import LogP from './LogP';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<><Cabecalho /><TextoAbertura/><Botoes/></>}/>
           <Route path="/Login" element={<><LogE /></>}/>
+          <Route path="/LoginP" element={<><LogP /></>}/>
         </Routes>
     </div>
   );

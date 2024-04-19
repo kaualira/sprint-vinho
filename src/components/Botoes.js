@@ -1,13 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import LogE from '../LogE';
-// import Switch from 'react-switch';
-// import Logine from './Logine';
-
-// import './style.css';
-
-// import { Container } from './styles';
-
 
 function Botoes () {
     return (
@@ -18,9 +10,11 @@ function Botoes () {
                 <img src='imgs/Empresa.png' alt='empresa' className='empresa'/>
             </div>
             </Link>
+            <Link to="/LoginP">
             <div className="botao2">
                 <img src='imgs/Pessoa.png' alt='pessoa' className='pessoa'/>
             </div>
+            </Link>
         </div>
         </>
     )
