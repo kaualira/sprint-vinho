@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function BlocoLoginF () {
     return (
@@ -9,7 +9,7 @@ function BlocoLoginF () {
                 <img src='Imagens/Pagina_4/pessoa1.png' alt='' className='pessoinha'/>
                 <p className='p'>Faça seu Login</p>
 
-                <p>ENTRAR</p>
+                <Link to="/"><p>ENTRAR</p></Link>
                 <div className='linhadourada'></div>
             </div>
         </div>

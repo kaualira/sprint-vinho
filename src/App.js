@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import LogE from './LogE';
 import LogP from './LogP';
 import LogF from './LogF';
+// import LoginF from './LoginF';
 
 function App() {
   return (
