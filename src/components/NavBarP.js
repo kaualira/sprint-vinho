@@ -2,7 +2,7 @@ function NavBarP () {
     return (
         <>
             <nav>
-            <img src='Imagens/Pagina_/pessoa.png' alt='' className='pessoinha'/>
+                <img src='Imagens/NavBar pessoa/Site.jpg' alt='' className='logonav'/>
             </nav>
         </>
     )

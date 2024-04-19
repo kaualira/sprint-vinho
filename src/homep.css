@@ -11,3 +11,8 @@ nav {
     position: relative;
     z-index: 2;
 }
+
+.logonav {
+    width: 100px;
+    height: 100px;
+}
