@@ -10,9 +10,21 @@ nav {
     background-color: #442C0F;
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .logonav {
     width: 100px;
-    height: 100px;
+    height: 60px;
+
+}
+
+nav p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
