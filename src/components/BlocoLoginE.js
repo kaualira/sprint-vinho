@@ -11,7 +11,7 @@ function BlocoLoginE () {
                     <p className='p1'>sua empresa</p>
                     <p className='p2'>Já está cadastrado em</p>
                     <p className='p2'>nosso sistema?</p>
-                    <Link to="/"><p className='p3'>ENTRE AQUI!</p></Link>
+                    <Link to="/LoginF"><p className='p3'>ENTRE AQUI!</p></Link>
                 </div>
                 <div className='dados'>
                     <div className='dados1'>
