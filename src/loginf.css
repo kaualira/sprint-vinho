@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.blocofundof {
+    width: 100%;
+    height: 75vh;
+    /* background-color: aqua; */
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blocologinf {
+    width: 420px;
+    height: 320px;
+    background-color: #32200A;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.pessoinha {
+    width: 60px;
+    height: 60px;
+}
+
+.blocologinf .p {
+    color: white;
+    font-size: 32px;
+    text-align:center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+}
+
+.blocologinf p {
+    color: white;
+    font-size: 32px;
+    text-align:center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+}
+
+.linhadourada {
+    width: 90%;
+    height: 3px;
+    background-color: gold;
+}

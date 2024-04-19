@@ -1,16 +1,23 @@
-import './index.css';
+import './index1.css';
 import React from 'react';
 import Cabecalho from './components/Cabecalho';
 import TextoAbertura from './components/TextoAbertura';
 import Botoes from './components/Botoes';
-
+import { Routes, Route } from 'react-router-dom';
+import LogE from './LogE';
+import LogP from './LogP';
+import LogF from './LogF';
+// import LoginF from './LoginF';
 
 function App() {
   return (
     <div>
-      <Cabecalho />
-      <TextoAbertura />
-      <Botoes />
+        <Routes>
+          <Route path="/" element={<><Cabecalho /><TextoAbertura/><Botoes/></>}/>
+          <Route path="/Login" element={<><LogE /></>}/>
+          <Route path="/LoginP" element={<><LogP /></>}/>
+          <Route path="/LoginF" element={<><LogF /></>}/>
+        </Routes>
     </div>
   );
 }
