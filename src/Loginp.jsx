@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './loginp.css';
+import './logine.css';
 import LogP from './LogP';
 import { BrowserRouter } from 'react-router-dom';
 
