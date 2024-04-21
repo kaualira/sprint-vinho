@@ -7,8 +7,10 @@ function NavBarP () {
                 <p>NOSSOS SERVIÇOS</p>
                 <p>SOBRE NÓS</p>
                 <p>CONTATO DA EMPRESA</p>
+                <div className="botoesnav">
                 <img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img>
                 <img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" width={50}></img>
+                </div>
             </nav>
         </>
     )
