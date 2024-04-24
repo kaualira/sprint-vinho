@@ -58,10 +58,31 @@ function HoP () {
             </div>
             <div className='sobrenosfundo'>
                 <div className='logosobrenos'>
-                <img src='Imagens/Pagina_5/Linha_de_pontinho1.jpg' alt="#" className="linhadeponto"></img>
-                <img src='Imagens/Pagina_5/Sobre.png' alt="#" className="sobreimg"></img>
+                    <img src='Imagens/Pagina_5/Linha_de_pontinho1.jpg' alt="#" className="linhadeponto"></img>
+                    {/* <img src='Imagens/Pagina_5/Sobre.png' alt="#" className="sobreimg"></img> */}
                 </div>
-
+                <div className='sobrenostexto'>
+                    <p>Bem-vindo ao Vallée d’Or, o seu destino online para apreciadores de cachaça e vinho! Nós, da Vallée d’Or, 
+                    estamos apaixonados por oferecer uma seleção cuidadosamente curada dos melhores vinhos do Brasil. Nosso compromisso com a 
+                    qualidade é evidente em cada garrafa que oferecemos, refletindo a riqueza da terra e a dedicação artesanal dos nossos 
+                    produtores parceiros, estamos há anos no mercado, a Vallée d’Or se estabeleceu como uma referência confiável e respeitada 
+                    no mundo dos vinhos. Com uma trajetória sólida e uma reputação de excelência</p>
+                </div>
+            </div>
+            <div className='nossocontatofundo'>
+                <div className='bloquinhosdados'>
+                    <p>Nosso contato</p>
+                </div>
+                <div className='bloquinhosdados2'>
+                    <p>E-mail:</p>
+                    <p>valledor@gmail.com</p>
+                    <p>Tell:(11) 99999-9999</p>
+                </div>
+                <div className='bloquinhosdados2'>
+                    <p>Disponíveis de:</p>
+                    <p>segunda a sexta - 8h às 19h</p>
+                    <p>sábado - 8h às 13h</p>
+                </div>
             </div>
         </div>
     )

@@ -163,7 +163,7 @@ nav p {
 .sobrenoscima {
     width: auto;
     height: 125px;
-    background-color: aqua;
+    background-color: #E5D6CB;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -179,15 +179,20 @@ nav p {
 .sobrenosfundo {
     width: auto;
     height: 500px;
-    background-color: blueviolet;
+    background-color: #E5D6CB;;
+    position: relative;
+    z-index: 1;
+    display: flex;
 }
 
 .logosobrenos {
-    width: 45%;
+    width: 50%;
     height: 100%;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     align-items: end;
+    position: relative;
+    z-index: 2;
 }
 
 .linhadeponto {
@@ -197,8 +202,64 @@ nav p {
 }
 
 .sobreimg {
-    width: 50%;
+    width: 20vw;
     position: relative;
     z-index: 2;
     
+}
+
+.sobrenostexto {
+    width: 50%;
+    height: 100%;
+    /* background-color: green; */
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sobrenostexto p {
+    font-size: 24px;
+    color: #442C0F;
+    width: 60%;
+}
+
+.nossocontatofundo {
+    width: 100%;
+    height: 120px;
+    background-color: #442C0F;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bloquinhosdados {
+    width: 25%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+
+}
+
+.bloquinhosdados2 {
+    width: 25%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.bloquinhosdados p {
+    color: white;
+    font-size: 46px;
 }
