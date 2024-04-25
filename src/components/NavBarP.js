@@ -5,7 +5,7 @@ function NavBarP () {
     return (
         <>
             <nav>
-                <img src='Imagens/NavBar pessoa/Site.jpg' alt='#' className='logonav'/>
+                <a href="#home"><img src='Imagens/NavBar pessoa/Site.jpg' alt='#' className='logonav'/></a>
                 <a href="#home"><p>HOME</p></a>
                 <a href="#nossosservicos"><p>NOSSOS SERVIÇOS</p></a>
                 <a href="#sobrenos"><p>SOBRE NÓS</p></a>
