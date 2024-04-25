@@ -8,9 +8,8 @@ import BlocoLoginF from './components/BlocoLoginF';
 function LogF() {
   return (
     <div>
-        <Routes>
-          <Route path="/LoginF" element={<><Cabecalho /><BlocoLoginF /></>}/>
-        </Routes>
+      <Cabecalho />
+      <BlocoLoginF />
     </div>
   );
 }

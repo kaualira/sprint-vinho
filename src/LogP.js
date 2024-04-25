@@ -7,9 +7,8 @@ import { Routes, Route } from 'react-router-dom';
 function LogE() {
     return (
       <div>
-        <Routes>
-          <Route path="/LoginP" element={<><Cabecalho /><BlocoLoginP /></>}/>
-        </Routes>
+          <Cabecalho />
+          <BlocoLoginP />
       </div>
     );
   }

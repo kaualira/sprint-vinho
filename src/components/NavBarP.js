@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 function NavBarP () {
@@ -10,8 +10,6 @@ function NavBarP () {
                 <p>NOSSOS SERVIÇOS</p>
                 <p>SOBRE NÓS</p>
                 <p>CONTATO DA EMPRESA</p>
-                <Link to="/"><img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img></Link>
-                <Link to="/"><img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" width={50}></img></Link>
                 <div className="botoesnav">
                 <img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img>
                 <img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" width={50}></img>
