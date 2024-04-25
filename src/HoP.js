@@ -2,7 +2,7 @@
 // import Cabecalho from './components/Cabecalho';  
 import NavBarP from './components/NavBarP';
 import Carousel from './components/Carousel';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import { Link } from 'react-router-dom';
 import './homep.css';
 
@@ -148,6 +148,7 @@ function HoP () {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
