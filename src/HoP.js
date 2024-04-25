@@ -11,6 +11,11 @@ function HoP () {
     return (
         <div>
             <NavBarP />
+            <section id='home'>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
             <div className='bemvindo2'>
                 <p>BEM VINDO!</p>
             </div>
@@ -18,6 +23,7 @@ function HoP () {
             <Link to="/Vinhos"><p>Nossos Vinhos</p></Link>
             </div>
             <Carousel />
+            </section>
             <div className='vantagens'>
                 <div className='bloquinhos'>
                     <img src='Imagens/Pagina_5/avião.png' alt="#" className="imgbloquinho"></img>
@@ -48,6 +54,8 @@ function HoP () {
                         </div>
                 </div>
             </div>
+            <section id='nossosservicos'>
+                <div className='espacobranco'></div>
             <div className='nossosservicos'>
                 <p className='pnossosservicos'>NOSSOS SERVIÇOS</p>
             </div>
@@ -55,6 +63,9 @@ function HoP () {
                 <img src='Imagens/Pagina_5/Assinatura.png' alt="#" className="imgbloquinho"></img>
                 <img src='Imagens/Pagina_5/Kit.jpg' alt="#" className="imgbloquinho"></img>
             </div>
+            </section>
+            <section id='sobrenos'>
+            <div className='espacobranco'></div>
             <div className='sobrenoscima'>
                 <p>SOBRE NÓS</p>
             </div>
@@ -71,6 +82,9 @@ function HoP () {
                     no mundo dos vinhos. Com uma trajetória sólida e uma reputação de excelência</p>
                 </div>
             </div>
+            </section>
+            <section id='nossocontato'>
+            <div className='espacobranco'></div>
             <div className='nossocontatofundo'>
                 <div className='bloquinhosdados'>
                     <p>Nosso contato</p>
@@ -86,6 +100,7 @@ function HoP () {
                     <p>sábado - 8h às 13h</p>
                 </div>
             </div>
+            </section>
             <div className='nossotrabalhofundo'>
                 <p>Veja mais sobre nosso trabalho</p>
             </div>
