@@ -19,7 +19,6 @@ function App() {
           <Route path="/LoginP" element={<><LogP /></>}/>
           <Route path="/LoginF" element={<><LogF /></>}/>
           <Route path="/HomeP" element={<><HoP /></>}/>
-          {/* <Route path="/Homep"> element={<><LogP/></>}/> */}
           <Route path="/Vinhos" element={<><Vin /></>}/>
         </Routes>
     </div>
