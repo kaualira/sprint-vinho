@@ -8,6 +8,7 @@ import LogE from './LogE';
 import LogP from './LogP';
 import LogF from './LogF';
 import HoP from './HoP';
+import Vin from './Vin';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/LoginF" element={<><LogF /></>}/>
           <Route path="/HomeP" element={<><HoP /></>}/>
           <Route path="/Homep"> element={<><LogP/></>}</Route>
+          <Route path="/Vinhos" element={<><Vin /></>}/>
         </Routes>
     </div>
   );

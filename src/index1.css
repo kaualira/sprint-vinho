@@ -58,7 +58,7 @@ body {
 
 /* bloco texto  */
 
-.blocotexto {
+.blocotexto1 {
   width: 100%;
   height: 120px;
   /* background-color: aqua; */
@@ -69,7 +69,7 @@ body {
   align-items: center;
 }
 
-.bemvindo {
+.bemvindo1 {
   color: white;
   font-size: 55px;
   font-family: "Italiana", sans-serif;

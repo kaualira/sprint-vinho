@@ -12,6 +12,10 @@ function NavBarP () {
                 <p>CONTATO DA EMPRESA</p>
                 <Link to="/"><img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img></Link>
                 <Link to="/"><img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" width={50}></img></Link>
+                <div className="botoesnav">
+                <img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img>
+                <img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" width={50}></img>
+                </div>
             </nav>
         </>
     )
