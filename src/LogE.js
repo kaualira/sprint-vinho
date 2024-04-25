@@ -8,7 +8,7 @@ function LogE() {
     return (
       <div>
         <Routes>
-          <Route path="/" element={<><Cabecalho /><BlocoLoginE/></>}/>
+          <Route path="/Login" element={<><Cabecalho /><BlocoLoginE/></>}/>
         </Routes>
       </div>
     );

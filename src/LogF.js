@@ -9,7 +9,7 @@ function LogF() {
   return (
     <div>
         <Routes>
-          <Route path="/" element={<><Cabecalho /><BlocoLoginF /></>}/>
+          <Route path="/LoginF" element={<><Cabecalho /><BlocoLoginF /></>}/>
         </Routes>
     </div>
   );

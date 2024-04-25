@@ -7,7 +7,6 @@ import { Routes, Route } from 'react-router-dom';
 import LogE from './LogE';
 import LogP from './LogP';
 import LogF from './LogF';
-// import LoginF from './LoginF';
 import HoP from './HoP';
 
 function App() {
@@ -19,6 +18,7 @@ function App() {
           <Route path="/LoginP" element={<><LogP /></>}/>
           <Route path="/LoginF" element={<><LogF /></>}/>
           <Route path="/HomeP" element={<><HoP /></>}/>
+          <Route path="/Homep"> element={<><LogP/></>}</Route>
         </Routes>
     </div>
   );
