@@ -104,7 +104,7 @@ nav p {
 }
 
 .bloquinhos {
-    width: 13%;
+    width: 15%;
     height: 100%;
     /* background-color: blue; */
     display: flex;
@@ -164,7 +164,7 @@ nav p {
 
 .sobrenoscima {
     width: auto;
-    height: 125px;
+    height: 110px;
     background-color: #E5D6CB;
     display: flex;
     align-items: end;
@@ -192,13 +192,13 @@ nav p {
     height: 100%;
     /* background-color: red; */
     display: flex;
-    align-items: end;
+    align-items: center;
     position: relative;
     z-index: 2;
 }
 
 .linhadeponto {
-    width: 100%;
+    width: 80%;
     position:relative;
     z-index: 1;
 }
@@ -224,7 +224,7 @@ nav p {
 .sobrenostexto p {
     font-size: 24px;
     color: #442C0F;
-    width: 60%;
+    width: 80%;
 }
 
 .nossocontatofundo {
@@ -298,98 +298,105 @@ nav p {
 
 .blocoavaliacoes {
     width: 100%;
-    height: 650px;
-    background-color: #E5D6CB;
+    height: 600px;
+    background-color: aqua;
     display: flex;
-}
-
-.avaliacao1 {
-    width: 50%;
-    height: 100%;
-    /* background-color:aqua; */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.avaliacao2 {
-    width: 50%;
-    height: 100%;
-    /* background-color:blue; */
 }
 
 .blocoavaliacao1 {
-    width: 75%;
-    height: 95%;
-    /* background-color: darkgreen; */
-    margin: 10px;
+    width: 50%;
+    height: 100%;
+    background-color: #E5D6CB   ;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: end;
+    /* align-items: center; */
+    /* margin: 5px; */
+}
+.blocoavaliacao2 {
+    width: 50%;
+    height: 100%;
+    background-color: #E5D6CB   ;
+    display: flex;
+    justify-content: start;
+    /* align-items: center; */
+    /* margin: 5px; */
+}
+
+.blococonteudo {
+    width: 85%;
+    height: 90%;
+    /* background-color: aquamarine; */
+    margin: 5px;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.blocoestrela {
+    width: 100%;
+    height: 14%;
+    /* background-color: brown; */
+    display: flex;
     align-items: center;
-    text-align: center;
-}
-
-.blocoavaliacao1 img {
-    width: 15%;
-    margin-bottom: 15px;
-}
-
-.blocoavaliacao1 p {
-    color: white;
-    font-family: "Josefin Slab", serif;
-    font-weight: 200;
-    font-size: 22px;
-    width: 75%;
+    justify-content: center;
 }
 
 .blocotexto {
-    width: 75%;
-    height: 70%;
-    background-color:#442C0F;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.blocoass {
-    width: 75%;
-    height: 15%;
-    background-color: #442C0F;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.blocoass p {
-    color: white;
-    font-size: 24px;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* footer  */
-.footer {
     width: 100%;
-    height: 200px;
-    background-color: #442C0F;
+    height: 88%;
+    /* background-color: darkgreen; */
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
+    justify-content: center;
 }
 
-.p4 {
+.bloquinhotexto {
+    width: 80%;
+    height: 85%;
+    background-color: #442C0F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloquinhoinhotexto {
+    width: 80%;
+    height: 90%;
+    /* background-color: burlywood; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.bloquinhoinhotexto p {
     color: white;
     font-size: 20px;
-    font-family: "Inria Serif", serif;
-    font-weight: 300;
+    font-family: 'Josefin Slab', sans-serif;
 }
 
-.p5 {
+.bloquinhoespaço {
+    width: 100%;
+    height: 5%;
+    /* background-color: crimson; */
+    /* align-self: self-end; */
+}
+
+.bloquinhoass {
+    width: 100%;
+    height: 20%;
+    /* background-color: rgb(52, 213, 20); */
+    /* align-self: self-end; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bloquinhoass h1 {
     color: white;
-    font-size: 12px;
-    font-family: "Inria Serif", serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    width: 50%;
+    font-size: 24px;
 }

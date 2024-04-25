@@ -2,7 +2,7 @@
 // import Cabecalho from './components/Cabecalho';  
 import NavBarP from './components/NavBarP';
 import Carousel from './components/Carousel';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import { Link } from 'react-router-dom';
 import './homep.css';
 
@@ -60,7 +60,7 @@ function HoP () {
             </div>
             <div className='sobrenosfundo'>
                 <div className='logosobrenos'>
-                    <img src='Imagens/Pagina_5/Linha_de_pontinho1.jpg' alt="#" className="linhadeponto"></img>
+                    <img src='Imagens/Pagina_5/sobreNos00.png' alt="#" className="linhadeponto"></img>
                     {/* <img src='Imagens/Pagina_5/Sobre.png' alt="#" className="sobreimg"></img> */}
                 </div>
                 <div className='sobrenostexto'>
@@ -95,38 +95,59 @@ function HoP () {
                 <img src='Imagens/Pagina_5/NossosTrabalhos3.jpeg' alt="#" className=""></img>
             </div>
             <div className='blocoavaliacoes'>
-                <div className='avaliacao1'>
-                    <div className='blocoavaliacao1'>
-                        <img src='Imagens/Pagina_5/5_estrelas.png' alt="#" className=""></img>
-                            <div className='blocotexto'>
-                                <p>Os vinhos da vinícola Vallée D'or são verdadeiras joias enológicas que capturam a essência e a beleza das suas 
-                                origens. Cada gole é uma jornada sensorial que revela o cuidado meticuloso e a paixão pela produção de vinhos 
-                                excepcionais. Os vinhos desta vinícola são caracterizados por uma qualidade notável, refletindo o terroir único 
-                                das suas vinhas e o talento dos seus enólogos. Desde os seus tintos encorpados até os frescos e vibrantes rosés, 
-                                cada garrafa é uma celebração da diversidade e da riqueza do mundo do vinho. </p>
+                <div className='blocoavaliacao1'>
+                    <div className='blococonteudo'>
+                        <div className='blocoestrela'>
+                            <img src='Imagens/Pagina_5/5_estrelas.png' alt="#" className=""></img>
+                        </div>
+                        <div className='blocotexto'>
+                            <div className='bloquinhotexto'>
+                                <div className='bloquinhoinhotexto'>
+                                    <p>Os vinhos da vinícola Vallée D'or são verdadeiras joias enológicas que 
+                                        capturam a essência e a beleza das suas origens. Cada gole é uma jornada 
+                                        sensorial que revela o cuidado meticuloso e a paixão pela produção de vinhos excepcionais.
+                                        Os vinhos desta vinícola são caracterizados por uma qualidade notável, 
+                                        refletindo o terroir único das suas vinhas e o talento dos seus enólogos. 
+                                        Desde os seus tintos encorpados até os frescos e vibrantes rosés, cada 
+                                        garrafa é uma celebração da diversidade e da riqueza do mundo do vinho. </p>
+                                        <div className='bloquinhoespaço'>
+
+                                        </div>
+                                        <div className='bloquinhoass'>
+                                            <h1>Ass: Renato Brasil</h1>
+                                        </div>  
+                                </div>
                             </div>
-                            <div className='blocoass'>
-                                <p>Ass: Renato Brasil</p>
-                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className='avaliacao2'>
-                    <div className='blocoavaliacao1'>
-                    <img src='Imagens/Pagina_5/5_estrelas.png' alt="#" className=""></img>
-                            <div className='blocotexto'>
-                                <p>Os vinhos da Vallée D'or são mais do que simplesmente bebidas; são obras de arte engarrafadas, destinadas a 
-                                    serem apreciadas em momentos especiais e compartilhadas com aqueles que apreciam o melhor que a vida tem a 
-                                    oferecer. Seja para uma ocasião íntima ou uma celebração festiva.  O Rosé Vallée D'or Naturelle é um 
-                                    exemplo impressionante da maestria da vinícola. Com sua cor rosada radiante e aromas sedutores de frutas 
-                                    vermelhas frescas, este vinho cativa os sentidos desde o primeiro momento. </p>
+                <div className='blocoavaliacao2'>
+                    <div className='blococonteudo'>
+                        <div className='blocoestrela'>
+                            <img src='Imagens/Pagina_5/5_estrelas.png' alt="#" className=""></img>
+                        </div>
+                        <div className='blocotexto'>
+                            <div className='bloquinhotexto'>
+                                <div className='bloquinhoinhotexto'>
+                                    <p>Os vinhos da Vallée D'or são mais do que simplesmente bebidas; são obras de 
+                                        arte engarrafadas, destinadas a serem apreciadas em momentos especiais e 
+                                        compartilhadas com aqueles que apreciam o melhor que a vida tem a oferecer. 
+                                        Seja para uma ocasião íntima ou uma celebração festiva.  O Rosé Vallée D'or 
+                                        Naturelle é um exemplo impressionante da maestria da vinícola. Com sua cor 
+                                        rosada radiante e aromas sedutores de frutas vermelhas frescas, este vinho 
+                                        cativa os sentidos desde o primeiro momento.</p>
+                                        <div className='bloquinhoespaço'>
+
+                                        </div>
+                                        <div className='bloquinhoass'>
+                                            <h1>Ass: Wallace Neves</h1>
+                                        </div>
+                                </div>
                             </div>
-                            <div className='blocoass'>
-                                <p>Ass: Wallace Neves</p>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
