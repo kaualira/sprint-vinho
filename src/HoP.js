@@ -4,6 +4,7 @@ import NavBarP from './components/NavBarP';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 import { Link } from 'react-router-dom';
+import { countries } from "../src/components/Data";
 import './homep.css';
 
 
@@ -22,7 +23,7 @@ function HoP () {
             <div className='vinhos'>
             <Link to="/Produtos"><p>Nossos Vinhos</p></Link>
             </div>
-            <Carousel />
+            <Carousel images={countries} />
             </section>
             <div className='vantagens'>
                 <div className='bloquinhos'>
