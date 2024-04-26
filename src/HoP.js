@@ -21,7 +21,7 @@ function HoP () {
                 <p>BEM VINDO!</p>
             </div>
             <div className='vinhos'>
-            <Link to="/Vinhos"><p>Nossos Vinhos</p></Link>
+            <Link to="/Produtos"><p>Nossos Vinhos</p></Link>
             </div>
             <Carousel images={countries} />
             </section>

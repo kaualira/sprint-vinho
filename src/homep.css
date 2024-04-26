@@ -434,3 +434,23 @@ nav p {
     text-align: center;
     width: 60%;
 }
+
+/* nav hover  */
+nav p:hover {
+    color: gray;
+    transition: all 1s;
+}
+
+.vinhos p:hover {
+    color: #FDC14C;
+    transition: all 1s;
+}
+
+.imgbloquinho {
+    transition: 1s;
+    transition-property: transform;
+}
+
+.imgbloquinho:hover {
+    transform: translateY(-10px);
+}
