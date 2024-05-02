@@ -5,11 +5,27 @@ const pizzaJson = [
   {
     id: 1,
     name: 'Mussarela',
-    img: 'images/pizza.png',
+    img: 'Imagens/Pagina_7/1.png',
     price: [20.00, 23.00, 25.00],
     sizes: ['6 fatias', '8 fatias', '12 fatias'],
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
-  }
+  },
+  {
+    id: 2,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 3,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
 ];
 
 function Prod() {
@@ -88,6 +104,11 @@ function Prod() {
     setMenuAberto(false);
   };
 
+  const limparCarrinho = () => {
+    setCart([]);
+    setSubtotal(0);
+  };
+
   return (
     <div className="App">
       <header>
@@ -97,13 +118,12 @@ function Prod() {
 </div>
       </header>
       <main>
-        <h2>Pizzas</h2>
         <div className="pizza-area">
           {pizzaJson.map((pizza, index) => (
             <div className="pizza-item" key={index} onClick={() => abrirModal(index)}>
               <img src={pizza.img} alt={pizza.name} />
-              <h3>{pizza.name}</h3>
-              <p>{pizza.description}</p>
+              {/* <h3>{pizza.name}</h3> */}
+              {/* <p>{pizza.description}</p> */}
               <button>Ver Mais</button>
             </div>
           ))}
@@ -136,6 +156,7 @@ function Prod() {
               <span>{formatoReal(subtotal)}</span> {/* Mostra o subtotal atualizado */}
             </div>
             <div className="cart--finalizar">Finalizar a compra</div>
+            <div className="cart--finalizar" onClick={limparCarrinho}>Limpar Carrinho</div>
           </div>
         </div>
       </aside>
@@ -173,6 +194,7 @@ function Prod() {
               </div>
               <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
               <button className="pizzaInfo--cancelButton" onClick={() => fecharModal()}>Cancelar</button>
+              
             </div>
           </div>
         </div>

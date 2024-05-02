@@ -44,19 +44,23 @@ body {
   }
   
   .pizza-item {
-    width: 25%;
+    width: 15%;
     padding: 10px;
     box-sizing: border-box;
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    
   }
-  
+/*   
   .pizza-item:hover {
     transform: translateY(-5px);
     transition: transform 0.2s ease-in-out;
-  }
+  } */
   
   .pizza-item img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
   }
   
   .pizza-item h3 {
@@ -70,7 +74,7 @@ body {
   }
   
   .pizza-item button {
-    background-color: #333;
+    background-color: #442C0F;
     color: #fff;
     border: none;
     padding: 8px 15px;
@@ -79,9 +83,16 @@ body {
   }
   
   .pizza-item button:hover {
-    background-color: #555;
+    background-color: #5b390f;
   }
   
+.pizza-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+}
+
   aside {
     width: 300px;
     background-color: #fff;
@@ -168,3 +179,12 @@ body {
     background-color: #555;
   }
   
+  .pizzaWindowArea {
+    width: 80%;
+    height: 600px;
+    background-color: red;
+  }
+
+  .pizzaWindowArea img {
+    width: 20%;
+  }
