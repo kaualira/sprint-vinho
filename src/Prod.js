@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './produtos.css';
 
 const pizzaJson = [
@@ -20,6 +20,8 @@ function Prod() {
   const [selectedSizeIndex, setSelectedSizeIndex] = useState(0);
   const [carrinhoAberto, setCarrinhoAberto] = useState(false);
   const [subtotal, setSubtotal] = useState(0); // Novo estado para o subtotal
+  const [menuAberto, setMenuAberto] = useState(false);
+  const menuAsideRef = useRef(null);
 
   const formatoReal = (valor) => {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -47,10 +49,10 @@ function Prod() {
     };
   
     setCart([...cart, novaPizza]);
-    setCarrinhoAberto(true);
-    fecharModal();
-    setQuantPizzas(1); // Definir quantPizzas de volta para 1 para a próxima adição
-    setSubtotal(subtotal + price); // Adicionar o preço da pizza ao subtotal existente
+  setQuantPizzas(1); // Definir quantPizzas de volta para 1 para a próxima adição
+  setSubtotal(subtotal + price); // Adicionar o preço da pizza ao subtotal
+  setMenuAberto(true); // Abrir o menu aside automaticamente
+  fecharModal(); // Fechar o modal de detalhes da pizza
   };
 
   const aumentarQuantidadePizza = (id) => {
@@ -78,13 +80,21 @@ function Prod() {
     setSubtotal(subtotalCalculado);
   };
 
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
+
+  const fecharMenu = () => {
+    setMenuAberto(false);
+  };
+
   return (
     <div className="App">
       <header>
         <h1>Pizzaria da Nonna</h1>
-        <div className="menu-openner">
-          <span>{cart.length}</span>🛒
-        </div>
+        <div className="menu-openner" onClick={toggleMenu}>
+  <span>{cart.length}</span>🛒
+</div>
       </header>
       <main>
         <h2>Pizzas</h2>
@@ -99,9 +109,9 @@ function Prod() {
           ))}
         </div>
       </main>
-      <aside className={carrinhoAberto ? 'show' : ''}>
+      <aside className={menuAberto && cart.length > 0 ? 'show' : ''} ref={menuAsideRef}>
         <div className="cart--area">
-          <div className="menu-closer" onClick={() => fecharCarrinho()}>❌</div>
+        <div className="menu-closer" onClick={fecharMenu}>❌</div>
           <h1>Suas Pizzas</h1>
           <div className="cart">
             {cart.map((item, index) => (
