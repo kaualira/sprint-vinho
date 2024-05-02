@@ -43,13 +43,14 @@ function Prod() {
       id: pizza.id,
       size: pizza.sizes[selectedSizeIndex],
       qt: quantPizzas,
-      price: price * quantPizzas
+      price: price // Apenas o preço da pizza, sem multiplicar pela quantidade
     };
+  
     setCart([...cart, novaPizza]);
     setCarrinhoAberto(true);
-    setQuantPizzas(1);
     fecharModal();
-    atualizarCarrinho();
+    setQuantPizzas(1); // Definir quantPizzas de volta para 1 para a próxima adição
+    setSubtotal(subtotal + price); // Adicionar o preço da pizza ao subtotal existente
   };
 
   const aumentarQuantidadePizza = (id) => {
@@ -57,7 +58,7 @@ function Prod() {
       item.id === id ? { ...item, qt: item.qt + 1, price: item.price + item.price / item.qt } : item
     );
     setCart(novaPizza);
-    atualizarCarrinho();
+    setSubtotal(subtotal + pizzaJson[id - 1].price[selectedSizeIndex]); // Adicionar o preço da pizza ao subtotal
   };
 
   const diminuirQuantidadePizza = (id) => {
@@ -65,7 +66,7 @@ function Prod() {
       item.id === id && item.qt > 1 ? { ...item, qt: item.qt - 1, price: item.price - item.price / item.qt } : item
     );
     setCart(novaPizza);
-    atualizarCarrinho();
+    setSubtotal(subtotal - pizzaJson[id - 1].price[selectedSizeIndex]); // Subtrair o preço da pizza do subtotal
   };
 
   const fecharCarrinho = () => {
@@ -73,7 +74,7 @@ function Prod() {
   };
 
   const atualizarCarrinho = () => {
-    const subtotalCalculado = cart.reduce((total, item) => total + item.price, 0); // Corrigido para calcular corretamente o subtotal
+    const subtotalCalculado = cart.reduce((total, item) => total + (item.price * item.qt), 0);
     setSubtotal(subtotalCalculado);
   };
 
@@ -170,4 +171,4 @@ function Prod() {
   );
 }
 
-export default Prod;
+export default Prod;  
