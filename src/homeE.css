@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&family=Italiana&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: #442C0F;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logonav {
+    width: 120px;
+    height: 60px;
+
+}
+
+nav p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.botoesnav {
+    display: flex;
+    width: 150px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bemvindo2 {
+    width: 100%;
+    height: 68px;
+    background-color: #E5D6CB;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bemvindo2 p {
+    color: black;
+    font-size: 50px;
+    font-family:"Italiana", sans-serif;
+    font-weight: 300;
+}
+
+.vinhos {
+    width: 100%;
+    height: 50px;
+    background-color: #442C0F;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vinhos p {
+    color: white;
+    font-family: "Italiana", sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+}
+
+/* carrossel  */
+
+.fundoCarousel {
+    width: 100%;
+    height: 70vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselimg {
+    width: 65%;
+    height: 100%;
+}
+
+/* fim do carrossel  */
+
+.vantagens {
+    margin-top: 1%;
+    width: 100%;
+    height: 70px;
+    background-color: #E9E9E9;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bloquinhos {
+    width: 15%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textobloquinhos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pnegrito {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+.pnormal {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+.nossosservicos {
+    width: auto;
+    height: 86px;
+    background-color: #E5D6CB;;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.espacobranco {
+    width: 100%;
+    height: 40px;
+    background-color: #E5D6CB;;
+}
+
+.pnossosservicos {
+    color: black;
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 52px;
+}
+
+.servicosfundo {
+    width: 100%;
+    height: 215px;
+    background-color: #442C0F;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.servicosfundo img {
+    width: 25%;
+}
+
+.sobrenoscima {
+    width: auto;
+    height: 110px;
+    background-color: #E5D6CB;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.sobrenoscima p {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    margin: 10px;
+}
+
+.sobrenosfundo {
+    width: auto;
+    height: 500px;
+    background-color: #E5D6CB;
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+.logosobrenos {
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.linhadeponto {
+    width: 80%;
+    position:relative;
+    z-index: 1;
+}
+
+.sobreimg {
+    width: 20vw;
+    position: relative;
+    z-index: 2;
+    
+}
+
+.sobrenostexto {
+    width: 50%;
+    height: 100%;
+    /* background-color: green; */
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sobrenostexto p {
+    font-size: 24px;
+    color: #442C0F;
+    width: 80%;
+}
+
+.nossocontatofundo {
+    width: 100%;
+    height: 120px;
+    background-color: #442C0F;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bloquinhosdados {
+    width: 25%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+
+}
+
+.bloquinhosdados2 {
+    width: 25%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.bloquinhosdados p {
+    color: white;
+    font-size: 46px;
+}
+
+.nossotrabalhofundo {
+    width: 100%;
+    height: 125px;
+    background-color: #E5D6CB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nossotrabalhofundo p {
+    color: #442C0F;
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.nossotrabalhoimgs {
+    width: 100%;
+    height: 350px;
+    background-color: #E5D6CB;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.nossotrabalhoimgs img {
+    width: 25%;
+    border-radius:20px ;
+}
+
+.blocoavaliacoes {
+    width: 100%;
+    height: 600px;
+    background-color: aqua;
+    display: flex;
+}
+
+.blocoavaliacao1 {
+    width: 50%;
+    height: 100%;
+    background-color: #E5D6CB   ;
+    display: flex;
+    justify-content: end;
+    /* align-items: center; */
+    /* margin: 5px; */
+}
+.blocoavaliacao2 {
+    width: 50%;
+    height: 100%;
+    background-color: #E5D6CB   ;
+    display: flex;
+    justify-content: start;
+    /* align-items: center; */
+    /* margin: 5px; */
+}
+
+.blococonteudo {
+    width: 85%;
+    height: 90%;
+    /* background-color: aquamarine; */
+    margin: 5px;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.blocoestrela {
+    width: 100%;
+    height: 14%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blocotexto {
+    width: 100%;
+    height: 88%;
+    /* background-color: darkgreen; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloquinhotexto {
+    width: 80%;
+    height: 85%;
+    background-color: #442C0F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloquinhoinhotexto {
+    width: 80%;
+    height: 90%;
+    /* background-color: burlywood; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.bloquinhoinhotexto p {
+    color: white;
+    font-size: 20px;
+    font-family: 'Josefin Slab', sans-serif;
+}
+
+.bloquinhoespaço {
+    width: 100%;
+    height: 5%;
+    /* background-color: crimson; */
+    /* align-self: self-end; */
+}
+
+.bloquinhoass {
+    width: 100%;
+    height: 20%;
+    /* background-color: rgb(52, 213, 20); */
+    /* align-self: self-end; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bloquinhoass h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+/* footer  */
+.footer {
+    width: 100%;
+    height: 125px;
+    background-color: #442C0F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.p23 {
+    color: white;
+    font-family: 'Inria Serif', sans-serif;
+    font-weight: 400;
+}
+
+.p24 {
+    color: white;
+    font-family: 'Inria Serif', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    width: 60%;
+}
+
+/* nav hover  */
+nav p:hover {
+    color: gray;
+    transition: all 1s;
+}
+
+.vinhos p:hover {
+    color: #FDC14C;
+    transition: all 1s;
+}
+
+.imgbloquinho {
+    transition: 1s;
+    transition-property: transform;
+}
+
+.imgbloquinho:hover {
+    transform: translateY(-10px);
+}
