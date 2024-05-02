@@ -41,6 +41,8 @@ body {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
   }
   
   .pizza-item {
@@ -180,9 +182,13 @@ body {
   }
   
   .pizzaWindowArea {
+    align-self: center;
     width: 80%;
-    height: 600px;
+    height: 500px;
     background-color: red;
+    position: fixed;
+    z-index: 2;
+    overflow: hidden;
   }
 
   .pizzaWindowArea img {
