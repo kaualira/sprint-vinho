@@ -1,15 +1,15 @@
 
 <nav>
-        <a href="#home"><img src='../imgs/SiteLogo.jpg' alt='#' className='logonav' width="150px"/></a>
+        <a href="#home"><img src='../imgs/SiteLogo.jpg' alt='#' className='logonav' width="130px"/></a>
         <a href="#home"><p>HOME</p></a>
         <a href="#nossosservicos"><p>NOSSOS SERVIÇOS</p></a>
         <a href="#sobrenos"><p>SOBRE NÓS</p></a>
         <a href="#nossocontato"><p>CONTATO DA EMPRESA</p></a>
-        <div className="botoesnav">
-        <img src='../imgs/carrinhonav.png' alt="#"></img>
+        
+        <img src='../imgs/carrinhonav.png' alt="#" class="carrinho" width="40px"></img>
         <a href="dadospessoais.php">
-        <img src='usuarionav.png' alt="#" width={50}></img> </a>
-        </div>
+        <img src='usuarionav.png' alt="#"  width="40px"></img> </a>
+        
     </nav>
 <style>
     * {
@@ -22,14 +22,14 @@
     
 nav {
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: #442C0F;
     position: fixed;
     z-index: 2;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .logonav {
@@ -42,7 +42,12 @@ nav p {
     color: white;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 14px; 
+}
+
+nav p:hover {
+    color: gray;
+    transition: all 1s;
 }
 
 .botoesnav {
@@ -50,5 +55,9 @@ nav p {
     width: 150px;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.carrinho{
+
 }
   </style>
