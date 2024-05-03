@@ -13,7 +13,7 @@ function HoP () {
         <div>
             <NavBarP />
             <section id='home'>
-                <br></br>
+                
                 <br></br>
                 <br></br>
                 <br></br>

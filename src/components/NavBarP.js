@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function NavBarP () {
@@ -10,10 +10,10 @@ function NavBarP () {
                 <a href="#nossosservicos"><p>NOSSOS SERVIÇOS</p></a>
                 <a href="#sobrenos"><p>SOBRE NÓS</p></a>
                 <a href="#nossocontato"><p>CONTATO DA EMPRESA</p></a>
-                <div className="botoesnav">
-                <img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img>
+                {/* <div className="botoesnav"> */}
+                <Link to="/Produtos"><img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#" className='linkcarrinho'></img></Link>
                 <img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" width={50}></img>
-                </div>
+                {/* </div> */}
             </nav>
         </>
     )

@@ -125,11 +125,22 @@ function Prod() {
   return (
     <div className="App">
       <header>
-        <h1>Pizzaria da Nonna</h1>
+      <a href="#home"><img src='Imagens/NavBar pessoa/Site.jpg' alt='#' className='logonav'/></a>
+      <a href="#home"><p>HOME</p></a>
+      <a href="#nossosservicos"><p>NOSSOS SERVIÇOS</p></a>
+      <a href="#sobrenos"><p>SOBRE NÓS</p></a>
+      <a href="#nossocontato"><p>CONTATO DA EMPRESA</p></a>
         <div className="menu-openner" onClick={toggleMenu}>
-  <span>{cart.length}</span>🛒
-</div>
+        <img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img>
+        <span>{cart.length}</span>
+        </div>
+        <img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" width={50}></img>
       </header>
+        <div className='vinhosheader'>
+          <div className='vinhosheaderlinha'></div>
+          <div className='vinhosheaderfrase'><p>VINHOS</p></div>
+          <div className='vinhosheaderlinha'></div>
+        </div>
       <main>
         <div className="pizza-area">
           {pizzaJson.map((pizza, index) => (
@@ -177,7 +188,7 @@ function Prod() {
         <div className="pizzaWindowArea">
           <div className="pizzaWindowBody">
             <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
-              
+            <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
               
           </div>
         </div>
