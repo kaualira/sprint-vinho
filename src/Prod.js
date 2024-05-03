@@ -177,38 +177,8 @@ function Prod() {
         <div className="pizzaWindowArea">
           <div className="pizzaWindowBody">
             <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
-            <div className="pizzaBig">
-              <img src={pizzaJson[modalKey].img} alt={pizzaJson[modalKey].name} />
-            </div>
-            <div className="pizzaInfo">
-              <h1>{pizzaJson[modalKey].name}</h1>
-              <div className="pizzaInfo--desc">{pizzaJson[modalKey].description}</div>
-              <div className="pizzaInfo--sizearea">
-                {/* <div className="pizzaInfo--sector">Tamanho</div>
-                <div className="pizzaInfo--sizes">
-                  {pizzaJson[modalKey].sizes.map((size, sizeIndex) => (
-                    <div
-                      key={sizeIndex}
-                      className={`pizzaInfo--size ${selectedSizeIndex === sizeIndex ? 'selected' : ''}`}
-                      onClick={() => setSelectedSizeIndex(sizeIndex)}
-                    >
-                      {size}
-                    </div>
-                  ))}
-                </div> */}
-              </div>
-              <div className="pizzaInfo--pricearea">
-                <div className="pizzaInfo--sector">Preço</div>
-                <div className="pizzaInfo--price">
-                  <div className="pizzaInfo--actualPrice">
-                    {formatoReal(pizzaJson[modalKey].price[selectedSizeIndex])}
-                  </div>
-                </div>
-              </div>
-              <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
-              <button className="pizzaInfo--cancelButton" onClick={() => fecharModal()}>Cancelar</button>
               
-            </div>
+              
           </div>
         </div>
       )}
@@ -217,3 +187,28 @@ function Prod() {
 }
 
 export default Prod;  
+
+// <div className="pizzaWindowArea">
+//           <div className="pizzaWindowBody">
+//             <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
+//             <div className="pizzaBig">
+//               <img src={pizzaJson[modalKey].img} alt={pizzaJson[modalKey].name} />
+//             </div>
+//             <div className="pizzaInfo">
+//               <h1>{pizzaJson[modalKey].name}</h1>
+//               <div className="pizzaInfo--desc">{pizzaJson[modalKey].description}</div>
+//               <div className="pizzaInfo--sizearea">
+//               </div>
+//               <div className="pizzaInfo--pricearea">
+//                 <div className="pizzaInfo--sector">Preço</div>
+//                 <div className="pizzaInfo--price">
+//                   <div className="pizzaInfo--actualPrice">
+//                     {formatoReal(pizzaJson[modalKey].price[selectedSizeIndex])}
+//                   </div>
+//                 </div>
+//               </div>
+//               <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
+//               <button className="pizzaInfo--cancelButton" onClick={() => fecharModal()}>Cancelar</button>
+//             </div>
+//           </div>
+//         </div>
