@@ -1,3 +1,6 @@
+<?php
+// include ("homep.css")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +16,13 @@
     <!-- Ajuste o caminho do seu CSS se necessário -->
     <link rel="stylesheet" href="Assinatura.css">
     <?php
-    include './Components/NavBarP.php';
+    include ("./components/NavBarP.js");
     ?>
 </head>
 
 <body>
+    <br>
+    <br>
     <div class="tituloAss">
         <div class="a01"></div>
         <div class="a02"><p>ASSINATURA</p></div>
@@ -41,8 +46,12 @@
         <button>Adquira agora!</button>
     </div>
 
+    <br>
+    <br>
     <footer>
-      
+    <?php
+    include './Components/Footer.js';
+    ?>
     </footer>
 </body>
 </html>

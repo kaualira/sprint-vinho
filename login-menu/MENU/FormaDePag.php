@@ -1,11 +1,15 @@
 <?php
 session_start();
-// include_once("templates/header.php"); // HEADER
+ include_once("navbar.php");
 
 ?>
+<br>
+<br>
+<br>
+<br><br>
 
 <link rel="stylesheet" href="css/carrinho.css">
-<link rel="stylesheet" href="/FormaDePag.css">
+<link rel="stylesheet" href="FormaDePag.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
@@ -109,10 +113,10 @@ $cardValidPlaceholder = '12/23';
 
         <div class="divEsquerda">
     <div class="haha">
-            <h2> Data de validade: 
+            <h2 id="h2haha"> Data de validade: 
             <input type="text" name="card_valid" id="cardValidInput" class="forms2">
             </h2>
-            <h2> CVC:
+            <h2 id="h2cvc"><p> CVC: </p>
             <input type="text" name="card_code" id="cardCodeInput" class="forms3">
             </h2><br>
         </div>
@@ -133,10 +137,12 @@ $cardValidPlaceholder = '12/23';
     </div>
         <div>
             
+<br>
+<br>
 
         <!-- Botão "Finalizar Compra" -->
         <!-- Botão "Finalizar Compra" -->
-        <input type="hidden" name="preco" value="<?php echo $_SESSION['valorReserva']; ?>">
+        <!-- <input type="hidden" name="preco" value="<?php echo $_SESSION['valorReserva']; ?>"> -->
     <button type="submit" name="finalizarCompra" onclick="window.location.href='formapa.php';">Salvar</button>
 </form>
   </form>
@@ -184,9 +190,9 @@ $cardValidPlaceholder = '12/23';
   // Update the card on page load
   updateCard();
 </script>
+<br>
+<br>
 
 
 
-<?php
- //Footer
-?>
+<?php include_once("footer.php"); ?>
