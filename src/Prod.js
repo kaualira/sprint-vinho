@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import './produtos.css';
 
+
 const pizzaJson = [
   {
     id: 1,
@@ -10,22 +11,22 @@ const pizzaJson = [
     sizes: ['6 fatias', '8 fatias', '12 fatias'],
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
-  {
-    id: 2,
-    name: 'Mussarela',
-    img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
-  },
-  {
-    id: 3,
-    name: 'Mussarela',
-    img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
-  },
+  // {
+  //   id: 2,
+  //   name: 'Mussarela',
+  //   img: 'Imagens/Pagina_7/1.png',
+  //   price: [20.00, 23.00, 25.00],
+  //   sizes: ['6 fatias', '8 fatias', '12 fatias'],
+  //   description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  // },
+  // {
+  //   id: 3,
+  //   name: 'Mussarela',
+  //   img: 'Imagens/Pagina_7/1.png',
+  //   price: [20.00, 23.00, 25.00],
+  //   sizes: ['6 fatias', '8 fatias', '12 fatias'],
+  //   description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  // },
 ];
 
 function Prod() {
@@ -183,7 +184,7 @@ function Prod() {
               <h1>{pizzaJson[modalKey].name}</h1>
               <div className="pizzaInfo--desc">{pizzaJson[modalKey].description}</div>
               <div className="pizzaInfo--sizearea">
-                <div className="pizzaInfo--sector">Tamanho</div>
+                {/* <div className="pizzaInfo--sector">Tamanho</div>
                 <div className="pizzaInfo--sizes">
                   {pizzaJson[modalKey].sizes.map((size, sizeIndex) => (
                     <div
@@ -194,7 +195,7 @@ function Prod() {
                       {size}
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
               <div className="pizzaInfo--pricearea">
                 <div className="pizzaInfo--sector">Preço</div>

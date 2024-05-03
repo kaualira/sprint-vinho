@@ -51,6 +51,7 @@ main {
   display: flex;
   justify-content:flex-start;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .pizza-item img {
@@ -178,18 +179,16 @@ aside {
 
 .pizzaWindowArea {
   align-self: center;
-  width: 80%;
-  height: 500px;
+  width: 100%;
+  height: 100vh;
   background-color: red;
   position: fixed;
-  /* transition: transform 1s;
-  transform: translateX(0) scale(0.5); */
 }
-
-/* .pizzaWindowArea:focus {
-  transform: translateX(10px) scale(1.2);
-} */
 
 .pizzaWindowArea img {
   width: 20%;
+}
+
+.pizzaWindowBody {
+  display: flex;
 }
