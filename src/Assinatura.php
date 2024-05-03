@@ -13,7 +13,7 @@
     <!-- Ajuste o caminho do seu CSS se necessário -->
     <link rel="stylesheet" href="Assinatura.css">
     <?php
-    include '../Components/NavBarP.php';
+    include './Components/NavBarP.php';
     ?>
 </head>
 
