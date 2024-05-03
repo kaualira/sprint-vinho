@@ -34,7 +34,7 @@ function Prod() {
   const [quantPizzas, setQuantPizzas] = useState(1);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSizeIndex, setSelectedSizeIndex] = useState(0);
-  const [carrinhoAberto, setCarrinhoAberto] = useState(false);
+  // const [carrinhoAberto, setCarrinhoAberto] = useState(false);
   const [subtotal, setSubtotal] = useState(0); // Novo estado para o subtotal
   const [menuAberto, setMenuAberto] = useState(false);
   const menuAsideRef = useRef(null);
@@ -81,19 +81,31 @@ function Prod() {
 
   const diminuirQuantidadePizza = (id) => {
     const novaPizza = cart.map((item) =>
-      item.id === id && item.qt > 1 ? { ...item, qt: item.qt - 1, price: item.price - item.price / item.qt } : item
+      item.id === id && item.qt > 0
+        ? { ...item, qt: item.qt - 1, price: item.price - item.price / item.qt }
+        : item
     );
-    setCart(novaPizza);
-    setSubtotal(subtotal - pizzaJson[id - 1].price[selectedSizeIndex]); // Subtrair o preço da pizza do subtotal
-  };
-
-  const fecharCarrinho = () => {
-    setCarrinhoAberto(false);
-  };
-
-  const atualizarCarrinho = () => {
-    const subtotalCalculado = cart.reduce((total, item) => total + (item.price * item.qt), 0);
-    setSubtotal(subtotalCalculado);
+  
+    // Verificar se a quantidade de pizzas é zero e remover o item do carrinho
+    if (novaPizza.find((item) => item.id === id && item.qt === 0)) {
+      const novoCarrinho = novaPizza.filter((item) => item.qt !== 0); // Remover itens com quantidade zero
+      setCart(novoCarrinho);
+  
+      // Atualizar o subtotal diretamente aqui
+      const subtotalCalculado = novoCarrinho.reduce((total, item) => total + item.price * item.qt, 0);
+      setSubtotal(subtotalCalculado);
+  
+      // Verificar se a quantidade de pizzas no carrinho é zero e fechar o menu aside
+      if (novoCarrinho.length === 0) {
+        setMenuAberto(false);
+      }
+    } else {
+      setCart(novaPizza);
+  
+      // Atualizar o subtotal diretamente aqui
+      const subtotalCalculado = novaPizza.reduce((total, item) => total + item.price * item.qt, 0);
+      setSubtotal(subtotalCalculado);
+    }
   };
 
   const toggleMenu = () => {
