@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './produtos.css';
 
-
 const pizzaJson = [
   {
     id: 1,
@@ -11,23 +10,81 @@ const pizzaJson = [
     sizes: ['6 fatias', '8 fatias', '12 fatias'],
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
-  // {
-  //   id: 2,
-  //   name: 'Mussarela',
-  //   img: 'Imagens/Pagina_7/1.png',
-  //   price: [20.00, 23.00, 25.00],
-  //   sizes: ['6 fatias', '8 fatias', '12 fatias'],
-  //   description: 'Molho de tomate, camada dupla de mussarela e orégano'
-  // },
-  // {
-  //   id: 3,
-  //   name: 'Mussarela',
-  //   img: 'Imagens/Pagina_7/1.png',
-  //   price: [20.00, 23.00, 25.00],
-  //   sizes: ['6 fatias', '8 fatias', '12 fatias'],
-  //   description: 'Molho de tomate, camada dupla de mussarela e orégano'
-  // },
+  {
+    id: 2,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 3,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 4,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 5,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 6,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 7,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 8,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 9,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 10,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: [20.00, 23.00, 25.00],
+    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+
 ];
+
 
 function Prod() {
   const [cart, setCart] = useState([]);
@@ -142,6 +199,7 @@ function Prod() {
           <div className='vinhosheaderlinha'></div>
         </div>
       <main>
+      <div className="pizza-area five-per-row">
         <div className="pizza-area">
           {pizzaJson.map((pizza, index) => (
             <div className="pizza-item" key={index} onClick={() => abrirModal(index)}>
@@ -151,6 +209,7 @@ function Prod() {
               <button>Ver Mais</button>
             </div>
           ))}
+        </div>
         </div>
       </main>
       <aside className={menuAberto && cart.length > 0 ? 'show' : ''} ref={menuAsideRef}>

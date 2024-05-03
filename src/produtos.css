@@ -60,6 +60,11 @@ header p:hover {
   margin-bottom: 50px;
 }
 
+.menu-closer {
+  cursor: pointer;
+  width: 10%;
+}
+
 .vinhosheader {
   background-color: #C5B8B8;
   width: 100%;
@@ -95,21 +100,36 @@ main {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  flex-direction: column;
 }
 
 .pizza-item {
-  width: 15%;
+  width: 14%; /* Defina a largura desejada para cada item de pizza */
+  margin: 20px;
+  box-sizing: border-box; /* Garante que a largura inclua o preenchimento e a borda */
+  margin-bottom: 20px; /* Espaçamento entre as linhas */
   padding: 10px;
   box-sizing: border-box;
   display: flex;
   justify-content:flex-start;
   flex-direction: column;
   cursor: pointer;
+  /* min-width:12%; */
 }
+
+.pizza-area.five-per-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
 
 .pizza-item img {
   width: 100%;
   border-radius: 10px 10px 0 0;
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do item */
+  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do item */
 }
 
 .pizza-item h3 {
@@ -140,7 +160,7 @@ main {
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
