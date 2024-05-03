@@ -1,20 +1,25 @@
 
 <nav>
-        <a href="#home"><img src='Imagens/NavBar pessoa/Site.jpg' alt='#' className='logonav'/></a>
+        <a href="#home"><img src='../imgs/SiteLogo.jpg' alt='#' className='logonav' width="150px"/></a>
         <a href="#home"><p>HOME</p></a>
         <a href="#nossosservicos"><p>NOSSOS SERVIÇOS</p></a>
         <a href="#sobrenos"><p>SOBRE NÓS</p></a>
         <a href="#nossocontato"><p>CONTATO DA EMPRESA</p></a>
         <div className="botoesnav">
-        <img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img>
+        <img src='../imgs/carrinhonav.png' alt="#"></img>
         <a href="dadospessoais.php">
         <img src='usuarionav.png' alt="#" width={50}></img> </a>
         </div>
     </nav>
 <style>
+    * {
+    margin: 0;
+    padding: 0;
+  }
     a{
         text-decoration: none;
     }
+    
 nav {
     width: 100%;
     height: 80px;
@@ -28,7 +33,7 @@ nav {
 }
 
 .logonav {
-    width: 120px;
+    width: 50px;
     height: 60px;
 
 }
