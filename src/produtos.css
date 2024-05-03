@@ -85,6 +85,9 @@ main {
   width: 100%;
   height: auto;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 aside {
@@ -179,8 +182,13 @@ aside {
   height: 500px;
   background-color: red;
   position: fixed;
-  overflow: hidden;
+  /* transition: transform 1s;
+  transform: translateX(0) scale(0.5); */
 }
+
+/* .pizzaWindowArea:focus {
+  transform: translateX(10px) scale(1.2);
+} */
 
 .pizzaWindowArea img {
   width: 20%;
