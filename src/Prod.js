@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './produtos.css';
+import Footer from './components/Footer';
 
 const pizzaJson = [
   {
@@ -72,6 +73,41 @@ const pizzaJson = [
     price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
+  {
+    id: 11,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: 20.00,
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 12,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: 20.00,
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 13,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: 20.00,
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 14,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: 20.00,
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
+  {
+    id: 15,
+    name: 'Mussarela',
+    img: 'Imagens/Pagina_7/1.png',
+    price: 20.00,
+    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+  },
 ];
 
 function Prod() {
@@ -79,7 +115,7 @@ function Prod() {
   const [modalKey, setModalKey] = useState(0);
   const [quantPizzas, setQuantPizzas] = useState(1);
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedSizeIndex, setSelectedSizeIndex] = useState(0);
+  const [selectedSizeIndex] = useState(0);
   const [subtotal, setSubtotal] = useState(0);
   const [menuAberto, setMenuAberto] = useState(false);
   const menuAsideRef = useRef(null);
@@ -189,10 +225,13 @@ function Prod() {
           </div>
         </div>
       </main>
+      <Footer />
       <aside className={menuAberto && cart.length > 0 ? 'show' : ''} ref={menuAsideRef}>
         <div className="cart--area">
           <div className="menu-closer" onClick={fecharMenu}>❌</div>
-          <h1>Suas Pizzas</h1>
+          <div className='carrinhotitulo'>
+          <h1>CARRINHO</h1>
+          </div>
           <div className="cart">
             {cart.map((item, index) => (
               <div className="cart--item" key={index}>

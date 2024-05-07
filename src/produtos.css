@@ -7,7 +7,8 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #C5B8B8;
+  border: 0;
 }
 
 .App {
@@ -166,7 +167,7 @@ main {
 
 aside {
   width: 300px;
-  background-color: #fff;
+  background-color: rgb(68, 44, 15, 0.8);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
@@ -174,6 +175,7 @@ aside {
   transition: right 0.3s ease-in-out;
   height: 100vh;
   overflow-y: auto;
+  
 }
 
 .show {
@@ -182,6 +184,16 @@ aside {
 
 .cart--area {
   padding: 20px;
+}
+
+.carrinhotitulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  /* font-weight: 100; */
+  color: white;
+  height: 10vh;
 }
 
 .cart--item {
