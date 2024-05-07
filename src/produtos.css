@@ -349,6 +349,7 @@ aside {
   background-color: red;
   position: fixed;
   display: flex;
+  margin-top: 80px;
 }
 
 .pizzaWindowArea img {
