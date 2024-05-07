@@ -5,10 +5,10 @@ import Footer from './components/Footer';
 const pizzaJson = [
   {
     id: 1,
-    name: 'Mussarela',
+    name: 'Vinho Rosé Vallée D’or Naturelle',
     img: 'Imagens/Pagina_7/1.png',
     price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    description: 'O Vinho Rosé Vallée D or Naturelle é um vinho rosé natural que encapsula a elegância e o frescor da tradição vinícola. Produzido com uvas selecionadas manualmente, exibe uma cor rosada vibrante e um aroma sedutor de frutas vermelhas frescas, complementadas por notas florais sutis.  O Vinho Rosé Vallée D or Naturelle oferece uma experiência sensorial que eleva qualquer ocasião com seu charme e sofisticação.'    
   },
   {
     id: 2,
@@ -279,8 +279,24 @@ function Prod() {
       {modalOpen && (
         <div className="pizzaWindowArea">
           <div className="pizzaWindowBody">
-            <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
-            <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
+            <div className='campotextoefoto'>
+              <div className='campofotoproduto'>
+                <img src={pizzaJson[modalKey].img} alt={pizzaJson[modalKey].name} className='fotoproduto'/>
+              </div>
+              <div className='campotitulotextoproduto'>
+                <div className='campotituloproduto'>
+                  <h1>{pizzaJson[modalKey].name}</h1>
+                </div>
+                <div className='campotextoproduto'>
+                  <div className="pizzaInfo--desc">{pizzaJson[modalKey].description}</div>
+                </div>
+              </div>
+            </div>
+            <div className='barrabotoesproduto'>
+              
+            </div>
+            {/* <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
+            <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button> */}
           </div>
         </div>
       )}

@@ -182,9 +182,9 @@ aside {
   right: 0;
 }
 
-.cart--area {
-  /* padding: 20px; */
-}
+/* .cart--area {
+  padding: 20px;
+} */
 
 .carrinhotitulo {
   display: flex;
@@ -358,6 +358,76 @@ aside {
 
 .pizzaWindowBody {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
+  
+}
+
+.campotextoefoto {
+  width: 1215px;
+  height: 80%;
+  background-color: aqua;
+  display:flex ;
+}
+
+.campofotoproduto {
+  width: 507px;
+  height: 100%;
+  background-color: rgb(0, 255, 8);
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.campofotoproduto img {
+  width: 300px;
+  margin-right: 50px;
+}
+
+.campotitulotextoproduto {
+  width: 708px;
+  height: 100%;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.campotituloproduto {
+  width: 708px;
+  height: 45%;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  font-family: 'Italiana', sans-serif;
+  font-weight: 100;
+  color: #442C0F;
+}
+
+.campotituloproduto h1 {
+  margin-bottom: 40px;
+  margin-left: 20px;
+  font-size: 40px;
+}
+
+.campotextoproduto {
+  width: 708px;
+  height: 55%;
+  background-color: rgb(231, 252, 0);
+  display: flex;
+  justify-content: start;
+}
+
+.pizzaInfo--desc {
+  font-family: 'Poppins', sans-serif;
+  color: #442C0F;
+  width: 80%;
+  margin-left: 20px;
+  font-size: 19px;
+}
+
+.barrabotoesproduto {
+  width: 200px;
+  height: 20px;
+  background-color: orange;
 }
