@@ -228,33 +228,51 @@ function Prod() {
       <Footer />
       <aside className={menuAberto && cart.length > 0 ? 'show' : ''} ref={menuAsideRef}>
         <div className="cart--area">
-          <div className="menu-closer" onClick={fecharMenu}>❌</div>
+          <div className="menu-closer" onClick={fecharMenu}>✖️</div>
           <div className='carrinhotitulo'>
           <h1>CARRINHO</h1>
           </div>
           <div className="cart">
-            {cart.map((item, index) => (
-              <div className="cart--item" key={index}>
+            <div className='barraprodutospreco'>
+              <div className='barraproduto'>
+                <p>Produtos</p>
+              </div>
+              <div className='barratotal'>
+                <p>Total</p>
+              </div>
+            </div>
+            {/* <div className='barradosprodutosetotal'>
+              <div className='barradosprodutos' key={index}>
                 <img src={pizzaJson[item.id - 1].img} alt={pizzaJson[item.id - 1].name} />
                 <div className="cart--item-nome">{pizzaJson[item.id - 1].name}</div>
+              </div>
+            </div> */}
+            {cart.map((item, index) => (
+              <div className="cart--item" key={index}>
+                <div className='blocoprodutocarrinho'>
+                  <img src={pizzaJson[item.id - 1].img} alt={pizzaJson[item.id - 1].name} />
+                  <div className="cart--item-nome">{pizzaJson[item.id - 1].name}</div>
+                </div>
                 <div className="cart--item--qtarea">
                   <button onClick={() => diminuirQuantidadePizza(item.id)}>-</button>
                   <div className="cart--item--qt">{item.qt}</div>
                   <button onClick={() => aumentarQuantidadePizza(item.id)}>+</button>
                 </div>
                 <div className="cart--item--details">
-                  <span>Preço: {formatoReal(item.price)}</span>
+                  <span>{formatoReal(item.price)}</span>
                 </div>
               </div>
             ))}
           </div>
           <div className="cart--details">
             <div className="cart--totalitem">
-              <span>Subtotal</span>
-              <span>{formatoReal(subtotal)}</span>
+              <span>Subtotal: </span>
+              <span> {formatoReal(subtotal)}</span>
             </div>
-            <div className="cart--finalizar">Finalizar a compra</div>
+            <div className='botoesfinalizarcarrinho'>
             <div className="cart--finalizar" onClick={limparCarrinho}>Limpar Carrinho</div>
+            <div className="cart--finalizar">Finalizar a compra</div>
+            </div>
           </div>
         </div>
       </aside>
