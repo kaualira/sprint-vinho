@@ -6,85 +6,73 @@ const pizzaJson = [
     id: 1,
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
   {
     id: 2,
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
   {
     id: 3,
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
   {
     id: 4,
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
   {
     id: 5,
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
   {
     id: 6,
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
   {
     id: 7,
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
   {
     id: 8,
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
   {
     id: 9,
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
   {
     id: 10,
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
-    price: [20.00, 23.00, 25.00],
-    sizes: ['6 fatias', '8 fatias', '12 fatias'],
+    price: 20.00,
     description: 'Molho de tomate, camada dupla de mussarela e orégano'
   },
-
 ];
-
 
 function Prod() {
   const [cart, setCart] = useState([]);
@@ -92,8 +80,7 @@ function Prod() {
   const [quantPizzas, setQuantPizzas] = useState(1);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSizeIndex, setSelectedSizeIndex] = useState(0);
-  // const [carrinhoAberto, setCarrinhoAberto] = useState(false);
-  const [subtotal, setSubtotal] = useState(0); // Novo estado para o subtotal
+  const [subtotal, setSubtotal] = useState(0);
   const [menuAberto, setMenuAberto] = useState(false);
   const menuAsideRef = useRef(null);
 
@@ -112,21 +99,20 @@ function Prod() {
 
   const adicionarNoCarrinho = () => {
     const pizza = pizzaJson[modalKey];
-    const price = pizza.price[selectedSizeIndex];
+    const price = pizza.price;
     const identificador = `${pizza.id}t${selectedSizeIndex}`;
     const novaPizza = {
       identificador,
       id: pizza.id,
-      size: pizza.sizes[selectedSizeIndex],
       qt: quantPizzas,
-      price: price // Apenas o preço da pizza, sem multiplicar pela quantidade
+      price: price * quantPizzas
     };
-  
+
     setCart([...cart, novaPizza]);
-  setQuantPizzas(1); // Definir quantPizzas de volta para 1 para a próxima adição
-  setSubtotal(subtotal + price); // Adicionar o preço da pizza ao subtotal
-  setMenuAberto(true); // Abrir o menu aside automaticamente
-  fecharModal(); // Fechar o modal de detalhes da pizza
+    setQuantPizzas(1);
+    setSubtotal(subtotal + novaPizza.price);
+    setMenuAberto(true);
+    fecharModal();
   };
 
   const aumentarQuantidadePizza = (id) => {
@@ -134,35 +120,28 @@ function Prod() {
       item.id === id ? { ...item, qt: item.qt + 1, price: item.price + item.price / item.qt } : item
     );
     setCart(novaPizza);
-    setSubtotal(subtotal + pizzaJson[id - 1].price[selectedSizeIndex]); // Adicionar o preço da pizza ao subtotal
+    setSubtotal(subtotal + pizzaJson[id - 1].price);
   };
 
   const diminuirQuantidadePizza = (id) => {
     const novaPizza = cart.map((item) =>
       item.id === id && item.qt > 0
-        ? { ...item, qt: item.qt - 1, price: item.price - item.price / item.qt }
+        ? { ...item, qt: item.qt - 1, price: item.price / item.qt * (item.qt - 1) } // Atualiza o preço proporcionalmente
         : item
     );
   
-    // Verificar se a quantidade de pizzas é zero e remover o item do carrinho
+    setCart(novaPizza);
+  
+    const subtotalCalculado = novaPizza.reduce((total, item) => total + item.price, 0);
+    setSubtotal(subtotalCalculado);
+  
     if (novaPizza.find((item) => item.id === id && item.qt === 0)) {
-      const novoCarrinho = novaPizza.filter((item) => item.qt !== 0); // Remover itens com quantidade zero
+      const novoCarrinho = novaPizza.filter((item) => item.qt !== 0);
       setCart(novoCarrinho);
   
-      // Atualizar o subtotal diretamente aqui
-      const subtotalCalculado = novoCarrinho.reduce((total, item) => total + item.price * item.qt, 0);
-      setSubtotal(subtotalCalculado);
-  
-      // Verificar se a quantidade de pizzas no carrinho é zero e fechar o menu aside
       if (novoCarrinho.length === 0) {
         setMenuAberto(false);
       }
-    } else {
-      setCart(novaPizza);
-  
-      // Atualizar o subtotal diretamente aqui
-      const subtotalCalculado = novaPizza.reduce((total, item) => total + item.price * item.qt, 0);
-      setSubtotal(subtotalCalculado);
     }
   };
 
@@ -182,39 +161,37 @@ function Prod() {
   return (
     <div className="App">
       <header>
-      <a href="#home"><img src='Imagens/NavBar pessoa/Site.jpg' alt='#' className='logonav'/></a>
-      <a href="#home"><p>HOME</p></a>
-      <a href="#nossosservicos"><p>NOSSOS SERVIÇOS</p></a>
-      <a href="#sobrenos"><p>SOBRE NÓS</p></a>
-      <a href="#nossocontato"><p>CONTATO DA EMPRESA</p></a>
+        <a href="#home"><img src='Imagens/NavBar pessoa/Site.jpg' alt='#' className='logonav'/></a>
+        <a href="#home"><p>HOME</p></a>
+        <a href="#nossosservicos"><p>NOSSOS SERVIÇOS</p></a>
+        <a href="#sobrenos"><p>SOBRE NÓS</p></a>
+        <a href="#nossocontato"><p>CONTATO DA EMPRESA</p></a>
         <div className="menu-openner" onClick={toggleMenu}>
-        <img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img>
-        <span>{cart.length}</span>
+          <img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img>
+          <span>{cart.length}</span>
         </div>
         <img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" width={50}></img>
       </header>
-        <div className='vinhosheader'>
-          <div className='vinhosheaderlinha'></div>
-          <div className='vinhosheaderfrase'><p>VINHOS</p></div>
-          <div className='vinhosheaderlinha'></div>
-        </div>
+      <div className='vinhosheader'>
+        <div className='vinhosheaderlinha'></div>
+        <div className='vinhosheaderfrase'><p>VINHOS</p></div>
+        <div className='vinhosheaderlinha'></div>
+      </div>
       <main>
-      <div className="pizza-area five-per-row">
-        <div className="pizza-area">
-          {pizzaJson.map((pizza, index) => (
-            <div className="pizza-item" key={index} onClick={() => abrirModal(index)}>
-              <img src={pizza.img} alt={pizza.name} />
-              {/* <h3>{pizza.name}</h3> */}
-              {/* <p>{pizza.description}</p> */}
-              <button>Ver Mais</button>
-            </div>
-          ))}
-        </div>
+        <div className="pizza-area five-per-row">
+          <div className="pizza-area">
+            {pizzaJson.map((pizza, index) => (
+              <div className="pizza-item" key={index} onClick={() => abrirModal(index)}>
+                <img src={pizza.img} alt={pizza.name} />
+                <button>Ver Mais</button>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
       <aside className={menuAberto && cart.length > 0 ? 'show' : ''} ref={menuAsideRef}>
         <div className="cart--area">
-        <div className="menu-closer" onClick={fecharMenu}>❌</div>
+          <div className="menu-closer" onClick={fecharMenu}>❌</div>
           <h1>Suas Pizzas</h1>
           <div className="cart">
             {cart.map((item, index) => (
@@ -227,7 +204,6 @@ function Prod() {
                   <button onClick={() => aumentarQuantidadePizza(item.id)}>+</button>
                 </div>
                 <div className="cart--item--details">
-                  <span>Tamanho: {item.size}</span>
                   <span>Preço: {formatoReal(item.price)}</span>
                 </div>
               </div>
@@ -236,7 +212,7 @@ function Prod() {
           <div className="cart--details">
             <div className="cart--totalitem">
               <span>Subtotal</span>
-              <span>{formatoReal(subtotal)}</span> {/* Mostra o subtotal atualizado */}
+              <span>{formatoReal(subtotal)}</span>
             </div>
             <div className="cart--finalizar">Finalizar a compra</div>
             <div className="cart--finalizar" onClick={limparCarrinho}>Limpar Carrinho</div>
@@ -248,7 +224,6 @@ function Prod() {
           <div className="pizzaWindowBody">
             <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
             <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
-              
           </div>
         </div>
       )}
@@ -256,7 +231,7 @@ function Prod() {
   );
 }
 
-export default Prod;  
+export default Prod;
 
 // <div className="pizzaWindowArea">
 //           <div className="pizzaWindowBody">
