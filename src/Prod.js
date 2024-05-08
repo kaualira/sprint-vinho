@@ -121,7 +121,10 @@ function Prod() {
   const menuAsideRef = useRef(null);
 
   const formatoReal = (valor) => {
-    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    if (valor) {
+      return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+    return 'Valor não disponível';
   };
 
   const abrirModal = (key) => {
@@ -293,7 +296,27 @@ function Prod() {
               </div>
             </div>
             <div className='barrabotoesproduto'>
-              
+              <div className='barrabotoesproduto2'>
+                <div className='barraprecoproduto'>
+                <div className="pizzaInfo--actualPrice">
+                     {formatoReal(pizzaJson[modalKey].price)}
+                  </div>
+                </div> 
+                <div className='barraquantproduto'>
+                  {cart.map((item, index) => (
+                    <div className="cart--item" key={index}>
+                      <div className="cart--item--qtarea">
+                        <button onClick={() => diminuirQuantidadePizza(item.id)}>-</button>
+                        <div className="cart--item--qt">{item.qt}</div>
+                        <button onClick={() => aumentarQuantidadePizza(item.id)}>+</button>
+                      </div>
+                    </div>
+                    ))}
+                </div>
+                <div className='barraaddcartproduto'>
+                  
+                </div>
+              </div>
             </div>
             {/* <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
             <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button> */}
