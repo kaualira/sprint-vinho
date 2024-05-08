@@ -296,24 +296,20 @@ function Prod() {
               </div>
             </div>
             <div className='barrabotoesproduto'>
+            <div className='barrabotaocancelar'>
+            <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
+            </div>
+            <div className='barrabotaocancelar'>
+            
+            </div>
               <div className='barrabotoesproduto2'>
                 <div className='barraprecoproduto'>
                 <div className="pizzaInfo--actualPrice">
                      {formatoReal(pizzaJson[modalKey].price)}
                   </div>
                 </div> 
-                <div className='barraquantproduto'>
-                  {cart.map((item, index) => (
-                    <div className="cart--item" key={index}>
-                      <div className="cart--item--qtarea">
-                        <button onClick={() => diminuirQuantidadePizza(item.id)}>-</button>
-                        <div className="cart--item--qt">{item.qt}</div>
-                        <button onClick={() => aumentarQuantidadePizza(item.id)}>+</button>
-                      </div>
-                    </div>
-                    ))}
-                </div>
                 <div className='barraaddcartproduto'>
+                  <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
                   
                 </div>
               </div>

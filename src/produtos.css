@@ -346,7 +346,7 @@ aside {
   justify-self: center;
   width: 80%;
   height: 80vh;
-  background-color: red;
+  background-color: #C5B8B8;
   position: fixed;
   display: flex;
   margin-top: 80px;
@@ -367,14 +367,14 @@ aside {
 .campotextoefoto {
   width: 1215px;
   height: 80%;
-  background-color: aqua;
+  /* background-color: aqua; */
   display:flex ;
 }
 
 .campofotoproduto {
   width: 507px;
   height: 100%;
-  background-color: rgb(0, 255, 8);
+  /* background-color: rgb(0, 255, 8); */
   display: flex;
   justify-content: end;
   align-items: end;
@@ -383,12 +383,13 @@ aside {
 .campofotoproduto img {
   width: 300px;
   margin-right: 50px;
+  border-radius: 20px 20px 0 0;
 }
 
 .campotitulotextoproduto {
   width: 708px;
   height: 100%;
-  background-color: blue;
+  /* background-color: blue; */
   display: flex;
   flex-direction: column;
 }
@@ -396,7 +397,7 @@ aside {
 .campotituloproduto {
   width: 708px;
   height: 45%;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   display: flex;
   justify-content: flex-start;
   align-items: end;
@@ -414,7 +415,7 @@ aside {
 .campotextoproduto {
   width: 708px;
   height: 55%;
-  background-color: rgb(231, 252, 0);
+  /* background-color: rgb(231, 252, 0); */
   display: flex;
   justify-content: start;
 }
@@ -430,7 +431,7 @@ aside {
 .barrabotoesproduto {
   width: 100%;
   height: 118px;
-  background-color: orange;
+  background-color: #AA9485;
   display: flex;
   justify-content: end;
 }
@@ -438,24 +439,66 @@ aside {
 .barrabotoesproduto2 {
   width: 55%;
   height: 118px;
-  background-color: rgb(83, 56, 7);
+  /* background-color: rgb(83, 56, 7); */
   display: flex;
 }
 
 .barraprecoproduto {
-  width: 30%;
+  width: 40%;
   height: 118px;
-  background-color: chartreuse;
-}
-
-.barraquantproduto {
-  width: 20%;
-  height: 118px;
-  background-color: rgb(86, 127, 45);
+  /* background-color: chartreuse; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  color: #442C0F;
 }
 
 .barraaddcartproduto {
-  width: 50%;
+  width: 60%;
   height: 118px;
-  background-color: rgb(22, 40, 4);
+  /* background-color: rgb(22, 40, 4); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barraaddcartproduto button {
+  width: 80%;
+  height: 50px;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  background-color: #442C0F;
+  color:white;
+  transition: all 0.5s;
+}
+
+.barraaddcartproduto button:hover {
+  background-color: #754c19;
+}
+
+.barrabotaocancelar {
+  width: 25%;
+  height: 118px;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  /* background-color: aqua; */
+}
+
+.pizzaInfo--cancelMobileButton {
+  width: 22%;
+  height: 35px;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  /* font-size: 20px; */
+  background-color: #442C0F;
+  color:white;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 10px 10px;
 }
