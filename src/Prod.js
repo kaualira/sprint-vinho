@@ -244,12 +244,6 @@ function Prod() {
                 <p>Total</p>
               </div>
             </div>
-            {/* <div className='barradosprodutosetotal'>
-              <div className='barradosprodutos' key={index}>
-                <img src={vinhoJson[item.id - 1].img} alt={vinhoJson[item.id - 1].name} />
-                <div className="cart--item-nome">{vinhoJson[item.id - 1].name}</div>
-              </div>
-            </div> */}
             {cart.map((item, index) => (
               <div className="cart--item" key={index}>
                 <div className='blocoprodutocarrinho'>
@@ -300,7 +294,11 @@ function Prod() {
                 <div className="vinhoInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
               </div>
               <div className='campobotaoficha'>
-                
+                {vinhoJson.map((index) => (
+                  <div className="vinho-item" key={index} onClick={() => abrirModal(index)}>
+                    <button>Ver Mais</button>
+                  </div>
+                ))}
               </div>
               <div className='campobotaopreco'>
                 <div className="vinhoInfo--actualPrice">
@@ -311,9 +309,6 @@ function Prod() {
                 <button className="vinhoInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
               </div>
             </div>
-
-            {/* <div className="vinhoInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
-            <button className="vinhoInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button> */}
           </div>
         </div>
       )}
@@ -322,48 +317,3 @@ function Prod() {
 }
 
 export default Prod;
-
-// <div className="vinhoWindowArea">
-//           <div className="vinhoWindowBody">
-//             <div className="vinhoInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
-//             <div className="vinhoBig">
-//               <img src={vinhoJson[modalKey].img} alt={vinhoJson[modalKey].name} />
-//             </div>
-//             <div className="vinhoInfo">
-//               <h1>{vinhoJson[modalKey].name}</h1>
-//               <div className="vinhoInfo--desc">{vinhoJson[modalKey].description}</div>
-//               <div className="vinhoInfo--sizearea">
-//               </div>
-//               <div className="vinhoInfo--pricearea">
-//                 <div className="vinhoInfo--sector">Preço</div>
-//                 <div className="vinhoInfo--price">
-//                   <div className="vinhoInfo--actualPrice">
-//                     {formatoReal(vinhoJson[modalKey].price[selectedSizeIndex])}
-//                   </div>
-//                 </div>
-//               </div>
-//               <button className="vinhoInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
-//               <button className="vinhoInfo--cancelButton" onClick={() => fecharModal()}>Cancelar</button>
-//             </div>
-//           </div>
-//         </div>
-
-{/* <div className='barrabotoesproduto'>
-            <div className='barrabotaocancelar'>
-            <div className="vinhoInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
-            </div>
-            <div className='barrabotaocancelar'>
-            
-            </div>
-              <div className='barrabotoesproduto2'>
-                <div className='barraprecoproduto'>
-                <div className="vinhoInfo--actualPrice">
-                     {formatoReal(vinhoJson[modalKey].price)}
-                  </div>
-                </div> 
-                <div className='barraaddcartproduto'>
-                  <button className="vinhoInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
-                  
-                </div>
-              </div>
-            </div> */}
