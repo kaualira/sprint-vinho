@@ -15,7 +15,7 @@ const vinhoJson = [
     name: 'Mussarela',
     img: 'Imagens/Pagina_7/1.png',
     price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    description: 'O Vinho Rosé Vallée D or Naturelle é um vinho rosé natural que encapsula a elegância e o frescor da tradição vinícola. Produzido com uvas selecionadas manualmente, exibe uma cor rosada vibrante e um aroma sedutor de frutas vermelhas frescas, complementadas por notas florais sutis.  O Vinho Rosé Vallée D or Naturelle oferece uma experiência sensorial que eleva qualquer ocasião com seu charme e sofisticação.'
   },
   {
     id: 3,
@@ -137,21 +137,32 @@ function Prod() {
   };
 
   const adicionarNoCarrinho = () => {
+    console.log('modalKey:', modalKey);
+    console.log('vinhoJson:', vinhoJson);
+    
     const vinho = vinhoJson[modalKey];
-    const price = vinho.price;
-    const identificador = `${vinho.id}t${selectedSizeIndex}`;
-    const novavinho = {
-      identificador,
-      id: vinho.id,
-      qt: quantvinhos,
-      price: price * quantvinhos
-    };
-
-    setCart([...cart, novavinho]);
-    setQuantvinhos(1);
-    setSubtotal(subtotal + novavinho.price);
-    setMenuAberto(true);
-    fecharModal();
+    
+    console.log('vinho:', vinho);
+    if (vinho) {
+      const price = vinho.price;
+      console.log('price:', price);
+    
+      const identificador = `${vinho.id}t${selectedSizeIndex}`;
+      const novavinho = {
+        identificador,
+        id: vinho.id,
+        qt: quantvinhos,
+        price: price * quantvinhos
+      };
+  
+      setCart([...cart, novavinho]);
+      setQuantvinhos(1);
+      setSubtotal(subtotal + novavinho.price);
+      setMenuAberto(true);
+      fecharModal();
+    } else {
+      console.error('Erro: índice modalKey fora do intervalo válido');
+    }
   };
 
   const aumentarQuantidadevinho = (id) => {
@@ -196,6 +207,7 @@ function Prod() {
     setCart([]);
     setSubtotal(0);
   };
+
 
   return (
     <div className="App">
@@ -247,8 +259,10 @@ function Prod() {
             {cart.map((item, index) => (
               <div className="cart--item" key={index}>
                 <div className='blocoprodutocarrinho'>
-                  <img src={vinhoJson[item.id - 1].img} alt={vinhoJson[item.id - 1].name} />
-                  <div className="cart--item-nome"><p>{vinhoJson[item.id - 1].name}</p></div>
+                  {vinhoJson[item.id - 1] && (
+                    <img src={vinhoJson[item.id - 1].img} alt={vinhoJson[item.id - 1].name} />
+                  )}
+                <div className="cart--item-nome"><p>{vinhoJson[item.id - 1]?.name}</p></div>                
                 </div>
                 <div className="cart--item--qtarea">
                   <button onClick={() => diminuirQuantidadevinho(item.id)}>-</button>
@@ -278,14 +292,20 @@ function Prod() {
           <div className="vinhoWindowBody">
             <div className='campotextoefoto'>
               <div className='campofotoproduto'>
-                <img src={vinhoJson[modalKey].img} alt={vinhoJson[modalKey].name} className='fotoproduto'/>
+                {vinhoJson[modalKey] && (
+                  <img src={vinhoJson[modalKey].img} alt={vinhoJson[modalKey].name} className='fotoproduto'/>
+                )}
               </div>
               <div className='campotitulotextoproduto'>
                 <div className='campotituloproduto'>
-                  <h1>{vinhoJson[modalKey].name}</h1>
+                {vinhoJson[modalKey] && (
+                <h1>{vinhoJson[modalKey].name}</h1>
+                )}
                 </div>
                 <div className='campotextoproduto'>
-                  <div className="vinhoInfo--desc">{vinhoJson[modalKey].description}</div>
+                  {vinhoJson[modalKey] && vinhoJson[modalKey].description && (
+                    <div className="vinhoInfo--desc">{vinhoJson[modalKey].description}</div>
+                  )}
                 </div>
               </div>
             </div>
@@ -294,11 +314,7 @@ function Prod() {
                 <div className="vinhoInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
               </div>
               <div className='campobotaoficha'>
-                {vinhoJson.map((index) => (
-                  <div className="vinho-item" key={index} onClick={() => abrirModal(index)}>
-                    <button>Ver Mais</button>
-                  </div>
-                ))}
+        
               </div>
               <div className='campobotaopreco'>
                 <div className="vinhoInfo--actualPrice">
