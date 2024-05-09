@@ -28,10 +28,10 @@
         <div class="menu1">
             <ul class="coluna1">
                 <li class="nav-item">
-                    <a class="link" href="dadospessoais.php">Dados Pessoais</a>
+                    <a class="link" href="../painel.php">Dados Pessoais</a>
                 </li>
                 <li class="nav-item">
-                    <a class="link" href="endereco.php">Endereço</a>
+                    <a class="link" href="../endereco.php">Endereço</a>
                 </li>
             </ul>
         </div>
@@ -39,7 +39,7 @@
         <div class="menu2">
             <ul class="coluna1">
                 <li class="nav-item">
-                    <a class="link" href="pedidos.php">Pedidos</a>
+                    <a class="link" href="../pedidos.php">Pedidos</a>
                 </li>
                 <li class="nav-item">
                     <a class="link1" href="#">Formas de Pagamento</a>
@@ -62,15 +62,47 @@
         <div class="linha-lateral">Forma de Pagamento</div>
     </div>
     <div class="inputs">
-<div class='d1'>
-<img src="VISA.png" class="visa-image">
-  <p> Letícia Gabrielle - </p>
-  <p> **** **** **** 0945</p>
-    </div>
-  
+    <?php
+
+session_start();
+
+// Verificar se o usuário está logado
+if (!isset($_SESSION['username'])) {
+}
+
+// Conectar-se ao banco de dados SQLite
+$db = new SQLite3('cartao.db');
+
+
+// Execute a consulta para buscar os dados
+$results = $db->query('SELECT card_name, card_number FROM cart');
+$row = $results->fetchArray();
+
+
+        // Verifica se há resultados da consulta
+        if ($results) {
+            while ($row = $results->fetchArray()) {
+                $cardName = $row['card_name'];
+                $cardNumber = $row['card_number'];
+
+                // Exibe os detalhes do cartão dentro da div "inputs"
+                echo "<div class='d1'>";
+                echo "<img src='VISA.png' class='visa-image'>"; 
+                echo "<p> $cardName</p>";
+                echo "<p> $cardNumber</p>";
+                echo "</div>";
+            }
+        } else {
+            // Caso não haja resultados, defina valores padrão ou exiba uma mensagem informando que não há dados
+            echo "Nenhum dado encontrado.";
+        }
+        ?>
+
+        
+
     <button type="button" class="button" onclick="location.href='FormaDePag.php'">Adicionar Nova Forma de Pagamento</button>
     </div>
-    <?php include_once("footer.php"); ?>
+    <?php include_once("../footer.php"); ?>
 </body>
 
 </html>
