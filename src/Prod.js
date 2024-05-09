@@ -47,66 +47,66 @@ const vinhoJson = [
   },
   {
     id: 7,
-    name: 'Mussarela',
+    name: 'Vinho tinto Vallée D’or Gamay',
     img: 'Imagens/Pagina_7/1.png',
-    price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    price: 110.00,
+    description: 'Alta intensidade aromática e alta tipicidade trazida pelo processo de maceração carbônica, aromas de morango, goiaba e maçã caramelada.'
   },
   {
     id: 8,
-    name: 'Mussarela',
+    name: 'Vinho tinto Vallée D’or Pinotage',
     img: 'Imagens/Pagina_7/1.png',
-    price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    price: 76.00,
+    description: 'Vinho Pinotage tem como principal característica suas notas de frutas vermelhas e berries, como mirtilo e framboesa, além de um discreto toque de fumaça e corpo médio. Sua cor é forte e intensa, seus taninos são marcantes e é possível perceber um sabor residual doce na boca após o consumo'
   },
   {
     id: 9,
-    name: 'Mussarela',
+    name: 'Vinho tinto Vallée D’or Bonarda',
     img: 'Imagens/Pagina_7/1.png',
-    price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    price: 198.43,
+    description: 'Vinho Bonarda revela um bouquet aromático intenso, onde destacam-se notas de frutas vermelhas e negras maduras, como amora, framboesa, morango, cereja e groselha, além de aromas de especiarias.'
   },
   {
     id: 10,
-    name: 'Mussarela',
+    name: 'Vinho tinto Vallée D’or Pinot Noir',
     img: 'Imagens/Pagina_7/1.png',
-    price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    price: 118.00,
+    description: 'Aromas de frutas vermelhas maduras como morangos e cerejas, além de notas florais como rosas, praticamente sem taninos e com ótima acidez.'
   },
   {
     id: 11,
-    name: 'Mussarela',
+    name: 'Vinho tinto Vallée D’or Cabernet Sauvignon',
     img: 'Imagens/Pagina_7/1.png',
-    price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    price: 113.90,
+    description: 'Apresenta aromas a fruta vermelha juntamente com notas de especiarias e notas de tabaco graças ao seu envelhecimento em carvalho. Na boca é delicado e complexo, com boa estrutura e taninos bem integrados. Final equilibrado e persistente.'
   },
   {
     id: 12,
-    name: 'Mussarela',
+    name: 'Vinho tinto Vallée D’or Malbec',
     img: 'Imagens/Pagina_7/1.png',
-    price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    price: 129.86,
+    description: 'Combina aromas a ameixas e amoras, com notas de canela, pimenta preta e lavanda. É um vinho complexo com boa estrutura, taninos macios e maduros. É equilibrado e com um final persistente onde aparecem os sabores tostados.'
   },
   {
     id: 13,
-    name: 'Mussarela',
+    name: 'Vinho tinto Vallée D’or Tempranillo',
     img: 'Imagens/Pagina_7/1.png',
-    price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    price: 59.90,
+    description: 'Os vinhos da Tempranillo são notáveis por seu corpo médio, enriquecidos com nuances frutadas que desdobram sabores e aromas de cereja, ameixa e toques sutis de baunilha.'
   },
   {
     id: 14,
-    name: 'Mussarela',
+    name: 'Vinho tinto Vallée D’or Carmenere',
     img: 'Imagens/Pagina_7/1.png',
-    price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    price: 78.54,
+    description: 'O vinho costuma ter um aroma de frutas negras frescas e herbáceas leves de eucalipto. Sua aparência é de um vermelho bem intenso, com uma borda mais rosada, e uma riqueza aromática muito grande. Além disso, pode ter acidez alta, média ou até mais leve, dependendo muito do vinho que você compra e do tempo que foi deixado em barrica. Seu tanino costuma ser alto e seu paladar bem estruturado, junto com sabores aveludados e chamativos.'
   },
   {
     id: 15,
-    name: 'Mussarela',
+    name: 'Vinho tinto Vallée D’or Arianarnoa',
     img: 'Imagens/Pagina_7/1.png',
-    price: 20.00,
-    description: 'Molho de tomate, camada dupla de mussarela e orégano'
+    price: 179.99,
+    description: 'Arinarnoa apresenta um vinho diferenciado e único, o qual surpreende com a coloração vermelho intensa com toques violáceos. Possui aromas que lembram frutas maduras, como figo em compota, em harmonia com notas de especiarias e da longa maturação em carvalho.'
   },
 ];
 
