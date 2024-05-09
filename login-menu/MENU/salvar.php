@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result) {
         echo "Dados inseridos com sucesso no banco de dados.";
-        header("Location: ../formapa.php");
+        header("Location:formapa.php");
     } else {
         echo "Erro ao inserir dados no banco de dados.";
     }

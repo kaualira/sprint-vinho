@@ -62,21 +62,21 @@
         <div class="linha-lateral">Forma de Pagamento</div>
     </div>
     <div class="inputs">
-    <?php
+        <?php
 
-session_start();
+        session_start();
 
-// Verificar se o usuário está logado
-if (!isset($_SESSION['username'])) {
-}
+        // Verificar se o usuário está logado
+        if (!isset($_SESSION['username'])) {
+        }
 
-// Conectar-se ao banco de dados SQLite
-$db = new SQLite3('cartao.db');
+        // Conectar-se ao banco de dados SQLite
+        $db = new SQLite3('cartao.db');
 
 
-// Execute a consulta para buscar os dados
-$results = $db->query('SELECT card_name, card_number FROM cart');
-$row = $results->fetchArray();
+        // Execute a consulta para buscar os dados
+        $results = $db->query('SELECT card_name, card_number FROM cart');
+        $row = $results->fetchArray();
 
 
         // Verifica se há resultados da consulta
@@ -86,10 +86,15 @@ $row = $results->fetchArray();
                 $cardNumber = $row['card_number'];
 
                 // Exibe os detalhes do cartão dentro da div "inputs"
+                echo "<div class='mars'>";
                 echo "<div class='d1'>";
-                echo "<img src='VISA.png' class='visa-image'>"; 
+                echo "<img src='VISA.png' class='visa-image'>";
                 echo "<p> $cardName</p>";
                 echo "<p> $cardNumber</p>";
+                echo "</div>";
+                echo "<div class='delete-container'>";
+                echo "<img src='../imgs/lixeira.png' class='delete-button' onclick='deleteCard(\"$cardNumber\")' alt=''>";
+                echo "</div>";
                 echo "</div>";
             }
         } else {
@@ -97,11 +102,25 @@ $row = $results->fetchArray();
             echo "Nenhum dado encontrado.";
         }
         ?>
-
-        
-
-    <button type="button" class="button" onclick="location.href='FormaDePag.php'">Adicionar Nova Forma de Pagamento</button>
+        <button type="button" class="button" onclick="location.href='FormaDePag.php'">Adicionar Nova Forma de Pagamento</button>
     </div>
+    <script>
+        function deleteCard(cardNumber) {
+            if (confirm("Tem certeza que deseja apagar este cartão?")) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "delete_card.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Atualiza a página após apagar o cartão
+                        window.location.reload();
+                    }
+                };
+                xhr.send("card_number=" + cardNumber);
+            }
+        }
+    </script>
+
     <?php include_once("../footer.php"); ?>
 </body>
 
