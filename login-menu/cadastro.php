@@ -19,7 +19,7 @@
 <div class='blocofundo'>
     <div class='blocologin'>
         <div class='facacadastro'>
-            <img src='Imagens/Pagina_2/predio.png' alt='' class='prediozinho'/>
+            <img src='Imgs/predio.png' alt='' class='prediozinho'/>
             <p class='p1'>Faça o cadastro de </p>
             <p class='p1'>sua empresa</p>
             <p class='p2'>Já está cadastrado em</p>
