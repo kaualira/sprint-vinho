@@ -6,42 +6,42 @@ const vinhoJson = [
   {
     id: 1,
     name: 'Vinho Rosé Vallée D’or Naturelle',
-    img: 'Imagens/Pagina_7/1.png',
+    img: 'Imagens/Pagina_7/2.png',
     price: 78.90,
     description: 'O Vinho Rosé Vallée D or Naturelle é um vinho rosé natural que encapsula a elegância e o frescor da tradição vinícola. Produzido com uvas selecionadas manualmente, exibe uma cor rosada vibrante e um aroma sedutor de frutas vermelhas frescas, complementadas por notas florais sutis.  O Vinho Rosé Vallée D or Naturelle oferece uma experiência sensorial que eleva qualquer ocasião com seu charme e sofisticação.'    
   },
   {
     id: 2,
     name: 'Vinho rosé Vallée D’or Grenache',
-    img: 'Imagens/Pagina_7/1.png',
+    img: 'Imagens/Pagina_7/2.png',
     price: 118.70,
     description: 'Aromas de frutas vermelhas como cereja, com aroma floral acentuado e notas de caramelo, sabor rico e macio predominando a fruta.'
   },
   {
     id: 3,
     name: 'Vinho Rosé Vallée D’or de Merlot',
-    img: 'Imagens/Pagina_7/1.png',
+    img: 'Imagens/Pagina_7/2.png',
     price: 72.00,
     description: 'Os vinhos Merlot são encorpados e com taninos altos, mas macios e acidez média. Aromas e sabores moderados e naturalmente adocicados. O grau de maturidade da uva determinará os sabores. Uvas de clima quente ou sobremaduras mostram fruta preta (ameixa e amora), podendo evoluir para bolo de frutas e até chocolate.'
   },
   {
     id: 4,
     name: 'Vinho branco Vallée D’or SWEET',
-    img: 'Imagens/Pagina_7/1.png',
+    img: 'Imagens/Pagina_7/3.png',
     price: 127.99,
     description: 'Aromas de frutas vermelhas e negras em compota. Notas de especiarias, Frutas maduras, suave, com taninos macios e um final persistente.Coloração amarelo pálido com reflexos esverdeados, perfil aromático intenso de flores brancas, leve toque frutado de pêssego, pera e lichia.'
   },
   {
     id: 5,
     name: 'Vinho branco Vallée D’or Chardonnay',
-    img: 'Imagens/Pagina_7/1.png',
+    img: 'Imagens/Pagina_7/3.png',
     price: 211.99,
     description: 'Com aromas de frutas brancas, cítricas, tropicais, flores e mel, os vinhos, muitas vezes encorpados e cremosos, podem também apresentar notas de baunilha, manteiga e tostado se envelhecidos em barricas de carvalho.'
   },
   {
     id: 6,
     name: 'Vinho branco Vallée D’or Moscato',
-    img: 'Imagens/Pagina_7/1.png',
+    img: 'Imagens/Pagina_7/3.png',
     price: 85.51,
     description: 'Vinhos de corpo leve, com alto teor de doçura e sem a presença de taninos. Os sabores e aromas típicos incluem notas de frutas cítricas, como limão e laranja, além de pêra, pêssego e uma variedade de flores, como flor de laranjeira, madressilva e rosa.'
   },
