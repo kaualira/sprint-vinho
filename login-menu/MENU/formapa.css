@@ -173,6 +173,7 @@ border-radius: 15px; /* Adiciona bordas arredondadas */
     font-weight: 400;
     text-decoration: none;
     font-size: 120%;
+    margin-bottom: 10%;
 }
 
 .button{

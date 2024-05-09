@@ -62,7 +62,7 @@
         <div class="menu1">
             <ul class="coluna1">
                 <li class="nav-item">
-                    <a class="link" href="dadospessoais.php">Dados Pessoais</a>
+                    <a class="link" href="painel.php">Dados Pessoais</a>
                 </li>
                 <li class="nav-item">
                     <a class="link" href="endereco.php">Endereço</a>
@@ -76,7 +76,7 @@
                     <a class="link1" href="#">Pedidos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="link" href="formapa.php">Formas de Pagamento</a>
+                    <a class="link" href="MENU/formapa.php">Formas de Pagamento</a>
                 </li>
                 <li class="nav-item">
                     <a class="link3" href="#">Formas de Pagamento</a>

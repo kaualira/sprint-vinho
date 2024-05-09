@@ -95,7 +95,8 @@ $cardValidPlaceholder = '12/23';
 ?>
 <div class="containerha">
 <div class="divDireita">
-<form class="forms" method="post" action="obrigadaArara.php">
+    
+<form class="forms" method="POST" action="salvar.php">
     <div style="display: flex; justify-content: space-between;">
         <div>
             <h2> Nome no cartão:</h2>
@@ -143,7 +144,7 @@ $cardValidPlaceholder = '12/23';
         <!-- Botão "Finalizar Compra" -->
         <!-- Botão "Finalizar Compra" -->
         <!-- <input type="hidden" name="preco" value="<?php echo $_SESSION['valorReserva']; ?>"> -->
-    <button type="submit" name="finalizarCompra" onclick="window.location.href='formapa.php';">Salvar</button>
+    <button type="submit" name="finalizarCompra" onclick="window.location.href='MENU/formapa.php';">Salvar</button>
 </form>
   </form>
 </form>
@@ -195,4 +196,4 @@ $cardValidPlaceholder = '12/23';
 
 
 
-<?php include_once("footer.php"); ?>
+<?php include_once("../footer.php"); ?>
