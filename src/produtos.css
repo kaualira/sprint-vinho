@@ -575,3 +575,22 @@ aside {
 .campobotaoaddcarrinho button:hover {
   background-color: #754c19;
 }
+
+.vinhoWindowArea2 {
+  align-self: center;
+  justify-self: center;
+  width: 80%;
+  height: 100vh;
+  background-color: #fd0101;
+  position: fixed;
+  display: flex;
+  /* margin-top: 80px; */
+}
+
+.vinhoWindowBody2 {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: column;
+
+}
