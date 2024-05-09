@@ -104,8 +104,8 @@ main {
   flex-direction: column;
 }
 
-.pizza-item {
-  width: 14%; /* Defina a largura desejada para cada item de pizza */
+.vinho-item {
+  width: 14%; /* Defina a largura desejada para cada item de vinho */
   margin: 20px;
   box-sizing: border-box; /* Garante que a largura inclua o preenchimento e a borda */
   margin-bottom: 20px; /* Espaçamento entre as linhas */
@@ -118,7 +118,7 @@ main {
   /* min-width:12%; */
 }
 
-.pizza-area.five-per-row {
+.vinho-area.five-per-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -126,24 +126,24 @@ main {
 }
 
 
-.pizza-item img {
+.vinho-item img {
   width: 100%;
   border-radius: 10px 10px 0 0;
   max-width: 100%; /* Garante que a imagem não ultrapasse a largura do item */
   max-height: 100%; /* Garante que a imagem não ultrapasse a altura do item */
 }
 
-.pizza-item h3 {
+.vinho-item h3 {
   margin: 10px 0;
   font-size: 1.2rem;
 }
 
-.pizza-item p {
+.vinho-item p {
   font-size: 0.9rem;
   color: #777;
 }
 
-.pizza-item button {
+.vinho-item button {
   background-color: #442C0F;
   color: #fff;
   border: none;
@@ -152,11 +152,11 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.pizza-item button:hover {
+.vinho-item button:hover {
   background-color: #5b390f;
 }
 
-.pizza-area {
+.vinho-area {
   width: 100%;
   height: auto;
   display: flex;
@@ -230,7 +230,7 @@ aside {
   /* padding-bottom: 10px; */
   justify-content: center;
   width: 100%;
-  height: 10vh;
+  height: 15vh;
   /* background-color: #777; */
 }
 
@@ -243,7 +243,11 @@ aside {
   justify-content: center;
   color: white;
   font-family: 'Poppins', sans-serif;
+}
 
+.blocoprodutocarrinho p {
+  width: 80%;
+  justify-content: center;
 }
 
 .cart--item--details {
@@ -255,11 +259,11 @@ aside {
   justify-content: center;
   color: white;
   font-family: 'Poppins', sans-serif;
-
+  text-align: justify;
 }
 
 .cart--item img {
-  width: 50px;
+  width: 20%;
   height: 50px;
   border-radius: 10px;
   margin-right: 10px;
@@ -267,7 +271,10 @@ aside {
 
 .cart--item-nome {
   flex-grow: 1;
-  font-weight: bold;
+  font-weight: 300;
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 
 .cart--item--qtarea button {
@@ -294,7 +301,7 @@ aside {
 .cart--details {
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #ccc;
+  /* border-top: 1px solid #ccc; */
 }
 
 .cart--totalitem {
@@ -317,7 +324,7 @@ aside {
 .botoesfinalizarcarrinho {
   display: flex;
   flex-direction: column;
-  height: 15vh;
+  height: 20vh;
   justify-content: center;
   align-items: center;
 }
@@ -341,22 +348,22 @@ aside {
   background-color: #ae7f60;
 }
 
-.pizzaWindowArea {
+.vinhoWindowArea {
   align-self: center;
   justify-self: center;
   width: 80%;
-  height: 80vh;
+  height: 100vh;
   background-color: #C5B8B8;
   position: fixed;
   display: flex;
-  margin-top: 80px;
+  /* margin-top: 80px; */
 }
 
-.pizzaWindowArea img {
+.vinhoWindowArea img {
   width: 20%;
 }
 
-.pizzaWindowBody {
+.vinhoWindowBody {
   display: flex;
   /* justify-content: center;
   align-items: center; */
@@ -365,39 +372,39 @@ aside {
 }
 
 .campotextoefoto {
-  width: 1215px;
-  height: 80%;
+  width: 100%;
+  height: 84vh;
   /* background-color: aqua; */
   display:flex ;
 }
 
 .campofotoproduto {
-  width: 507px;
-  height: 100%;
-  /* background-color: rgb(0, 255, 8); */
+  width: 40%;
+  height: 84vh;
+  background-color: rgb(0, 255, 8);
   display: flex;
   justify-content: end;
   align-items: end;
 }
 
 .campofotoproduto img {
-  width: 300px;
-  margin-right: 50px;
+  width: 70%;
+  margin-right: 40px;
   border-radius: 20px 20px 0 0;
 }
 
 .campotitulotextoproduto {
-  width: 708px;
-  height: 100%;
-  /* background-color: blue; */
+  width: 60%;
+  height: 84vh;
+  background-color: blue;
   display: flex;
   flex-direction: column;
 }
 
 .campotituloproduto {
-  width: 708px;
+  width: 100%;
   height: 45%;
-  /* background-color: blueviolet; */
+  background-color: blueviolet;
   display: flex;
   justify-content: flex-start;
   align-items: end;
@@ -420,7 +427,7 @@ aside {
   justify-content: start;
 }
 
-.pizzaInfo--desc {
+.vinhoInfo--desc {
   font-family: 'Poppins', sans-serif;
   color: #442C0F;
   width: 80%;
@@ -430,42 +437,42 @@ aside {
 
 .barrabotoesproduto {
   width: 100%;
-  height: 118px;
+  height: 16vh;
   background-color: #AA9485;
   display: flex;
   justify-content: end;
 }
 
 .barrabotoesproduto2 {
-  width: 55%;
+  width: 70%;
   height: 118px;
   /* background-color: rgb(83, 56, 7); */
   display: flex;
 }
 
 .barraprecoproduto {
-  width: 40%;
-  height: 118px;
-  /* background-color: chartreuse; */
+  width: 30%;
+  height: 16vh;
+  background-color: chartreuse;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Poppins', sans-serif;
-  font-size: 42px;
+  font-size: 32px;
   color: #442C0F;
 }
 
 .barraaddcartproduto {
-  width: 60%;
-  height: 118px;
-  /* background-color: rgb(22, 40, 4); */
+  width: 50%;
+  height: 16vh;
+  background-color: rgb(22, 40, 4);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .barraaddcartproduto button {
-  width: 80%;
+  width: 90%;
   height: 50px;
   border-radius: 15px;
   font-family: 'Poppins', sans-serif;
@@ -480,15 +487,15 @@ aside {
 }
 
 .barrabotaocancelar {
-  width: 25%;
-  height: 118px;
+  width: 15%;
+  height: 16vh;
   display: flex;
   justify-content: start;
   align-items: end;
-  /* background-color: aqua; */
+  background-color: aqua;
 }
 
-.pizzaInfo--cancelMobileButton {
+.vinhoInfo--cancelMobileButton {
   width: 22%;
   height: 35px;
   border-radius: 15px;
