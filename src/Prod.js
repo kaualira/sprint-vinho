@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import './produtos.css';
 import Footer from './components/Footer';
 
-const pizzaJson = [
+const vinhoJson = [
   {
     id: 1,
     name: 'Vinho Rosé Vallée D’or Naturelle',
@@ -113,7 +113,7 @@ const pizzaJson = [
 function Prod() {
   const [cart, setCart] = useState([]);
   const [modalKey, setModalKey] = useState(0);
-  const [quantPizzas, setQuantPizzas] = useState(1);
+  const [quantvinhos, setQuantvinhos] = useState(1);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSizeIndex] = useState(0);
   const [subtotal, setSubtotal] = useState(0);
@@ -137,45 +137,45 @@ function Prod() {
   };
 
   const adicionarNoCarrinho = () => {
-    const pizza = pizzaJson[modalKey];
-    const price = pizza.price;
-    const identificador = `${pizza.id}t${selectedSizeIndex}`;
-    const novaPizza = {
+    const vinho = vinhoJson[modalKey];
+    const price = vinho.price;
+    const identificador = `${vinho.id}t${selectedSizeIndex}`;
+    const novavinho = {
       identificador,
-      id: pizza.id,
-      qt: quantPizzas,
-      price: price * quantPizzas
+      id: vinho.id,
+      qt: quantvinhos,
+      price: price * quantvinhos
     };
 
-    setCart([...cart, novaPizza]);
-    setQuantPizzas(1);
-    setSubtotal(subtotal + novaPizza.price);
+    setCart([...cart, novavinho]);
+    setQuantvinhos(1);
+    setSubtotal(subtotal + novavinho.price);
     setMenuAberto(true);
     fecharModal();
   };
 
-  const aumentarQuantidadePizza = (id) => {
-    const novaPizza = cart.map((item) =>
+  const aumentarQuantidadevinho = (id) => {
+    const novavinho = cart.map((item) =>
       item.id === id ? { ...item, qt: item.qt + 1, price: item.price + item.price / item.qt } : item
     );
-    setCart(novaPizza);
-    setSubtotal(subtotal + pizzaJson[id - 1].price);
+    setCart(novavinho);
+    setSubtotal(subtotal + vinhoJson[id - 1].price);
   };
 
-  const diminuirQuantidadePizza = (id) => {
-    const novaPizza = cart.map((item) =>
+  const diminuirQuantidadevinho = (id) => {
+    const novavinho = cart.map((item) =>
       item.id === id && item.qt > 0
         ? { ...item, qt: item.qt - 1, price: item.price / item.qt * (item.qt - 1) } // Atualiza o preço proporcionalmente
         : item
     );
   
-    setCart(novaPizza);
+    setCart(novavinho);
   
-    const subtotalCalculado = novaPizza.reduce((total, item) => total + item.price, 0);
+    const subtotalCalculado = novavinho.reduce((total, item) => total + item.price, 0);
     setSubtotal(subtotalCalculado);
   
-    if (novaPizza.find((item) => item.id === id && item.qt === 0)) {
-      const novoCarrinho = novaPizza.filter((item) => item.qt !== 0);
+    if (novavinho.find((item) => item.id === id && item.qt === 0)) {
+      const novoCarrinho = novavinho.filter((item) => item.qt !== 0);
       setCart(novoCarrinho);
   
       if (novoCarrinho.length === 0) {
@@ -217,11 +217,11 @@ function Prod() {
         <div className='vinhosheaderlinha'></div>
       </div>
       <main>
-        <div className="pizza-area five-per-row">
-          <div className="pizza-area">
-            {pizzaJson.map((pizza, index) => (
-              <div className="pizza-item" key={index} onClick={() => abrirModal(index)}>
-                <img src={pizza.img} alt={pizza.name} />
+        <div className="vinho-area five-per-row">
+          <div className="vinho-area">
+            {vinhoJson.map((vinho, index) => (
+              <div className="vinho-item" key={index} onClick={() => abrirModal(index)}>
+                <img src={vinho.img} alt={vinho.name} />
                 <button>Ver Mais</button>
               </div>
             ))}
@@ -244,22 +244,16 @@ function Prod() {
                 <p>Total</p>
               </div>
             </div>
-            {/* <div className='barradosprodutosetotal'>
-              <div className='barradosprodutos' key={index}>
-                <img src={pizzaJson[item.id - 1].img} alt={pizzaJson[item.id - 1].name} />
-                <div className="cart--item-nome">{pizzaJson[item.id - 1].name}</div>
-              </div>
-            </div> */}
             {cart.map((item, index) => (
               <div className="cart--item" key={index}>
                 <div className='blocoprodutocarrinho'>
-                  <img src={pizzaJson[item.id - 1].img} alt={pizzaJson[item.id - 1].name} />
-                  <div className="cart--item-nome">{pizzaJson[item.id - 1].name}</div>
+                  <img src={vinhoJson[item.id - 1].img} alt={vinhoJson[item.id - 1].name} />
+                  <div className="cart--item-nome"><p>{vinhoJson[item.id - 1].name}</p></div>
                 </div>
                 <div className="cart--item--qtarea">
-                  <button onClick={() => diminuirQuantidadePizza(item.id)}>-</button>
+                  <button onClick={() => diminuirQuantidadevinho(item.id)}>-</button>
                   <div className="cart--item--qt">{item.qt}</div>
-                  <button onClick={() => aumentarQuantidadePizza(item.id)}>+</button>
+                  <button onClick={() => aumentarQuantidadevinho(item.id)}>+</button>
                 </div>
                 <div className="cart--item--details">
                   <span>{formatoReal(item.price)}</span>
@@ -280,42 +274,41 @@ function Prod() {
         </div>
       </aside>
       {modalOpen && (
-        <div className="pizzaWindowArea">
-          <div className="pizzaWindowBody">
+        <div className="vinhoWindowArea">
+          <div className="vinhoWindowBody">
             <div className='campotextoefoto'>
               <div className='campofotoproduto'>
-                <img src={pizzaJson[modalKey].img} alt={pizzaJson[modalKey].name} className='fotoproduto'/>
+                <img src={vinhoJson[modalKey].img} alt={vinhoJson[modalKey].name} className='fotoproduto'/>
               </div>
               <div className='campotitulotextoproduto'>
                 <div className='campotituloproduto'>
-                  <h1>{pizzaJson[modalKey].name}</h1>
+                  <h1>{vinhoJson[modalKey].name}</h1>
                 </div>
                 <div className='campotextoproduto'>
-                  <div className="pizzaInfo--desc">{pizzaJson[modalKey].description}</div>
+                  <div className="vinhoInfo--desc">{vinhoJson[modalKey].description}</div>
                 </div>
               </div>
             </div>
-            <div className='barrabotoesproduto'>
-            <div className='barrabotaocancelar'>
-            <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
-            </div>
-            <div className='barrabotaocancelar'>
-            
-            </div>
-              <div className='barrabotoesproduto2'>
-                <div className='barraprecoproduto'>
-                <div className="pizzaInfo--actualPrice">
-                     {formatoReal(pizzaJson[modalKey].price)}
+            <div className='campobotoesgeral'>
+              <div className='campobotaocancelar'>
+                <div className="vinhoInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
+              </div>
+              <div className='campobotaoficha'>
+                {vinhoJson.map((index) => (
+                  <div className="vinho-item" key={index} onClick={() => abrirModal(index)}>
+                    <button>Ver Mais</button>
                   </div>
-                </div> 
-                <div className='barraaddcartproduto'>
-                  <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
-                  
+                ))}
+              </div>
+              <div className='campobotaopreco'>
+                <div className="vinhoInfo--actualPrice">
+                  {formatoReal(vinhoJson[modalKey].price)}
                 </div>
               </div>
+              <div className='campobotaoaddcarrinho'>
+                <button className="vinhoInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
+              </div>
             </div>
-            {/* <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
-            <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button> */}
           </div>
         </div>
       )}
@@ -324,28 +317,3 @@ function Prod() {
 }
 
 export default Prod;
-
-// <div className="pizzaWindowArea">
-//           <div className="pizzaWindowBody">
-//             <div className="pizzaInfo--cancelMobileButton" onClick={() => fecharModal()}>Voltar</div>
-//             <div className="pizzaBig">
-//               <img src={pizzaJson[modalKey].img} alt={pizzaJson[modalKey].name} />
-//             </div>
-//             <div className="pizzaInfo">
-//               <h1>{pizzaJson[modalKey].name}</h1>
-//               <div className="pizzaInfo--desc">{pizzaJson[modalKey].description}</div>
-//               <div className="pizzaInfo--sizearea">
-//               </div>
-//               <div className="pizzaInfo--pricearea">
-//                 <div className="pizzaInfo--sector">Preço</div>
-//                 <div className="pizzaInfo--price">
-//                   <div className="pizzaInfo--actualPrice">
-//                     {formatoReal(pizzaJson[modalKey].price[selectedSizeIndex])}
-//                   </div>
-//                 </div>
-//               </div>
-//               <button className="pizzaInfo--addButton" onClick={() => adicionarNoCarrinho()}>Adicionar ao carrinho</button>
-//               <button className="pizzaInfo--cancelButton" onClick={() => fecharModal()}>Cancelar</button>
-//             </div>
-//           </div>
-//         </div>
