@@ -23,19 +23,28 @@
   margin-bottom: 3%;
   background-color: #AA9485;
   width: 550px;
+  height: 120px;
   border-radius: 15px; /* Adiciona bordas arredondadas */
- 
+  flex-direction: column;
 }
 
 .fundo p {
-  margin-left: 10px;
+  margin-right: 90px;
   color: #FFFFFF;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  text-decoration: none;
+  text-decoration:none;
   font-size: 80%;
 
+  
 }
+.p1{
+    margin-top: -110px;
+    
+}
+
+
+
 
 .visa-image {
   width: 120px; /* Defina a largura desejada */
@@ -98,8 +107,8 @@
     <div class="inputs">
     <div class='fundo'>
     <img src="Sobre.png" class="visa-image">
-  <p class="1"> 2X Vinho Tinto Pinotage </p>
-  <p class="2"> Pedido feito dia: 7/04/2024</p>
+  <p class="p1"> 2X Vinho Tinto Pinotage </p> <br> <br>
+  <p class="p2"> Pedido feito dia: 7/04/2024</p>
   <p class="3">Entregue dia: 11/04/2024</p>
     </div>
     </div>
