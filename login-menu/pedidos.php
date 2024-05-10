@@ -29,7 +29,7 @@
 }
 
 .fundo p {
-  margin-right: 90px;
+  margin-right: 120px;
   color: #FFFFFF;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -52,7 +52,7 @@
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     text-decoration:none;
-
+    
 
 }
 
@@ -64,8 +64,10 @@
   margin-right: 20px;
  
 }
+.tres{
+    margin-left: -5px;
 
-
+}
     </style>
 
 <body>
@@ -119,7 +121,7 @@
     <img src="Sobre.png" class="visa-image">
   <p class="p1"> 2X Vinho Tinto Pinotage </p> <br> <br>
   <p class="p2"> Pedido feito dia: 7/04/2024</p>
-  <p class="3">Entregue dia: 11/04/2024</p>
+  <p class="tres">Entregue dia: 11/04/2024</p>
     </div>
     <p class="p3"> R$:152,00</p>
     </div>
