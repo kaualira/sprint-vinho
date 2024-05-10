@@ -58,6 +58,15 @@ function HoE () {
               </div>
             ))}
           </Carousel>
+          <div className='bemvindo2'>
+                <p>BEM VINDO!</p>
+            </div>
+            <div className='bemvindo2'>
+                <p>BEM VINDO!</p>
+            </div>
+            <div className='vinhos'>
+            <Link to="/Produtos"><p>Nossos Vinhos</p></Link>
+            </div>
             <div className='vantagens'>
                 <div className='bloquinhos'>
                     <img src='Imagens/Pagina_5/avião.png' alt="#" className="imgbloquinho"></img>
