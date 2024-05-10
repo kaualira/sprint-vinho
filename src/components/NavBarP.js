@@ -12,8 +12,8 @@ function NavBarP () {
                 <a href="#nossocontato"><p>CONTATO DA EMPRESA</p></a>
                 {/* <div className="botoesnav"> */}
                 <Link to="/Produtos"><img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#" className='linkcarrinho'></img></Link>
-               <a href='http://localhost/sprint-vinho/login-menu/painel.php'>
-                <img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" width={150}></img> </a>
+
+                <Link to="http://localhost/sprint-vinho/login-menu/painel.php"><img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" className='linkcarrinho'></img></Link>
                 
                 {/* </div> */}
             </nav>
