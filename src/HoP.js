@@ -29,6 +29,16 @@ function HoP () {
         <div>
             <NavBarP />
             <section id='home'>
+            <div className='bemvindo2'>
+                <p>BEM VINDO!</p>
+            </div>
+            
+            <div className='bemvindo2'>
+                <p>BEM VINDO!</p>
+            </div>
+            <div className='vinhos'>
+            <Link to="/Produtos"><p>Nossos Vinhos</p></Link>
+            </div>
             <Carousel
             autoPlay
             infiniteLoop
@@ -46,17 +56,7 @@ function HoP () {
                 />
               </div>
             ))}
-          </Carousel>
-                <br></br>
-                <br></br>
-                <br></br>
-            <div className='bemvindo2'>
-                <p>BEM VINDO!</p>
-            </div>
-            <div className='vinhos'>
-            <Link to="/Produtos"><p>Nossos Vinhos</p></Link>
-            </div>
-            
+          </Carousel>            
             </section>
             <div className='vantagens'>
                 <div className='bloquinhos'>
