@@ -282,7 +282,7 @@ function Prod() {
             </div>
             <div className='botoesfinalizarcarrinho'>
             <div className="cart--finalizar" onClick={limparCarrinho}>Limpar Carrinho</div>
-            <div className="cart--finalizar">Finalizar a compra</div>
+          <a href='http://localhost/sprint-vinho/src/finalizar.php' ><div className="cart--finalizar">Finalizar a compra</div> </a> 
             </div>
           </div>
         </div>
