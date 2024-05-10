@@ -34,7 +34,7 @@ const vinhoJson = [
   {
     id: 5,
     name: 'Vinho branco Vallée D’or Chardonnay',
-    img: 'Imagens/Pagina_7/5.png',
+    img: 'Imagens/Pagina_7/4.png',
     price: 211.99,
     description: 'Com aromas de frutas brancas, cítricas, tropicais, flores e mel, os vinhos, muitas vezes encorpados e cremosos, podem também apresentar notas de baunilha, manteiga e tostado se envelhecidos em barricas de carvalho.'
   },
