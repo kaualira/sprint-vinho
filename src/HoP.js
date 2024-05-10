@@ -1,19 +1,52 @@
 // import React from 'react';
 // import Cabecalho from './components/Cabecalho';  
 import NavBarP from './components/NavBarP';
-import Carousel from './components/Carousel';
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import Footer from './components/Footer';
 import { Link } from 'react-router-dom';
-import { countries } from "../src/components/Data";
+
 import './homep.css';
 
 
 function HoP () {
+
+    const images = [
+        {
+          id: "1",
+          author: "Author 1",
+          src: require("../src/Carrossel1.png"), // Importa a imagem do arquivo local
+          alt: "Image 1"
+        },
+        {
+            id: "2",
+            author: "Author 2",
+            src: require("../src/Carrossel2.jpg"), // Importa outra imagem do arquivo local
+            alt: "Image 2"
+        }
+    ];
     return (
         <div>
             <NavBarP />
             <section id='home'>
-                
+            <Carousel
+            autoPlay
+            infiniteLoop
+            centerMode
+            interval={3000}
+            showThumbs={false} // Esta propriedade remove as miniaturas
+            
+          >
+            {images.map((image) => (
+              <div key={image.id}>
+                <img 
+                  src={image.src} 
+                  alt={image.alt} 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} // Estilo para preencher completamente o carousel
+                />
+              </div>
+            ))}
+          </Carousel>
                 <br></br>
                 <br></br>
                 <br></br>
@@ -23,7 +56,7 @@ function HoP () {
             <div className='vinhos'>
             <Link to="/Produtos"><p>Nossos Vinhos</p></Link>
             </div>
-            <Carousel images={countries} />
+            
             </section>
             <div className='vantagens'>
                 <div className='bloquinhos'>

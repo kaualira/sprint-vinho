@@ -1,0 +1,14 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .crsl {
+    width: 70%;
+    margin: auto;
+  }
+  
+  .carousel.carousel-slider .thumbs-wrapper {
+    display: none;
+  }
+  
