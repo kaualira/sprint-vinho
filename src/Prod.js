@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import './produtos.css';
 import Footer from './components/Footer';
+import { Link } from 'react-router-dom';
 
 const vinhoJson = [
   {
@@ -34,7 +35,7 @@ const vinhoJson = [
   {
     id: 5,
     name: 'Vinho branco Vallée D’or Chardonnay',
-    img: 'Imagens/Pagina_7/5.png',
+    img: 'Imagens/Pagina_7/4.png',
     price: 211.99,
     description: 'Com aromas de frutas brancas, cítricas, tropicais, flores e mel, os vinhos, muitas vezes encorpados e cremosos, podem também apresentar notas de baunilha, manteiga e tostado se envelhecidos em barricas de carvalho.'
   },
@@ -212,8 +213,9 @@ function Prod() {
   return (
     <div className="App">
       <header>
-        <a href="#home"><img src='Imagens/NavBar pessoa/Site.jpg' alt='#' className='logonav'/></a>
-        <a href="#home"><p>HOME</p></a>
+        <img src='Imagens/NavBar pessoa/Site.jpg' alt='#' className='logonav'/>
+        
+        <Link to="/HomeP"><p>HOME</p></Link>
         <a href="#nossosservicos"><p>NOSSOS SERVIÇOS</p></a>
         <a href="#sobrenos"><p>SOBRE NÓS</p></a>
         <a href="#nossocontato"><p>CONTATO DA EMPRESA</p></a>

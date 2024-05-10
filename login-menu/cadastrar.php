@@ -46,6 +46,6 @@ if ($stmt_insert_user->execute()) {
     echo "Error: " . $sql_insert_user . "<br>" . $stmt_insert_user->errorInfo();
 }
 
-header('Location: cadastroP.php');
+header('Location: cadastro.php');
 exit;
 ?>

@@ -129,7 +129,7 @@ $cardValidPlaceholder = '12/23';
 </div>
  
     <div class="live-update card" id="liveUpdateCard">
-        <img class="card-brand" src="path/to/<?php echo $cardBrand; ?>.png" alt="Card Brand">
+        <!-- <img class="card-brand" src="path/to/<?php echo $cardBrand; ?>.png" alt="Card Brand"> -->
         <div class="card-number"><?php echo $cardNumberPlaceholder; ?></div>
         <div class="card-name"><?php echo $cardNamePlaceholder; ?></div>
         <div class="card-valid">Validade: <?php echo $cardValidPlaceholder; ?></div>

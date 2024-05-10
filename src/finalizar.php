@@ -39,16 +39,18 @@
             padding: 5px;
             border-radius: 5px;
             border: none;
+            background-color: #AA9485;
         }
 
         .botao {
             background-color: #442C0F;
             color: #E5D6CB;
             border: none;
-            padding: 10px 20px;
+            padding: 5px 20px;
             border-radius: 15px;
             cursor: pointer;
-          
+            font-size: 13px;
+            cursor: pointer;
 
         }
 
@@ -131,7 +133,7 @@
             <form action="texts.php" method="post">
                 <p>ENDEREÇOS SALVOS:</p>
                 <div class="fundo">
-                    <p>Júlia</p>
+                    <p>Ana</p>
                     <p>R. Pombeiro de Magalhães, 231</p>
                     <p>Santo André, SP</p>
                 </div>
@@ -151,15 +153,15 @@
         <div class="tudo2">
             <div class="a002"><p>FORMAS SALVAS DE PAGAMENTO</p></div>
             <div class="fundo12">
-                <p>Júlia</p>
-                <p>2333 4555 6677 8990</p>
-                <p>Santo André, SP</p>
+                <p>VISA</p>
+                <p>**** **** **** 8990</p>
+                <p>Ana</p>
             </div>
             <div class="fundo122">
-                <p>1X Cachaça de maracujá R$ 194,98</p>
+                <p>1X Vinho rosé Vallée D’or R$ 118,70</p>
                 <p>Frete R$ 15,98</p>
-                <p class="total">TOTAL: R$ 210,96</p>
-                <button class="botao" type="submit">Confirmar pedido</button>
+                <p class="total">TOTAL: R$ 134,68</p>
+                <a href="obrigada.php" class="botao">Confirmar pedido</a>
             </div>
         </div>
     </div>
