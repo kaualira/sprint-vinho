@@ -44,7 +44,17 @@
 }
 
 
+.p3{
+    font-size: 25px;
+    color: #FFFFFF;
+    margin-top: -11%;
+    margin-left: 80%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-decoration:none;
 
+
+}
 
 .visa-image {
   width: 120px; /* Defina a largura desejada */
@@ -111,6 +121,7 @@
   <p class="p2"> Pedido feito dia: 7/04/2024</p>
   <p class="3">Entregue dia: 11/04/2024</p>
     </div>
+    <p class="p3"> R$:152,00</p>
     </div>
     <?php include_once("footer.php"); ?>
 </body>
