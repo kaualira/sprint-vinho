@@ -5,12 +5,12 @@ function Botoes () {
     return (
         <>
         <div className="blocobotoes">
-            <Link to="/Login">
+        <Link to="http://localhost/sprint-vinho/login-menu/cadastro.php">
             <div className="botao1">
                 <img src='imgs/Empresa.png' alt='empresa' className='empresa'/>
             </div>
             </Link>
-            <Link to="/LoginP">
+            <Link to="http://localhost/sprint-vinho/login-menu/cadastroP.php">
             <div className="botao2">
                 <img src='imgs/Pessoa.png' alt='pessoa' className='pessoa'/>
             </div>

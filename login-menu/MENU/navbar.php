@@ -1,7 +1,7 @@
 
 <nav>
         <a href="#home"><img src='../imgs/SiteLogo.jpg' alt='#' className='logonav' width="130px"/></a>
-        <a href="#home"><p>HOME</p></a>
+        <a href="http://localhost:3000/HomeP"><p>HOME</p></a>
         <a href="#nossosservicos"><p>NOSSOS SERVIÇOS</p></a>
         <a href="#sobrenos"><p>SOBRE NÓS</p></a>
         <a href="#nossocontato"><p>CONTATO DA EMPRESA</p></a>
@@ -57,7 +57,4 @@ nav p:hover {
     justify-content: space-around;
 }
 
-.carrinho{
-
-}
   </style>
