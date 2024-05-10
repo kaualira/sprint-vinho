@@ -26,11 +26,11 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($result) {
     $_SESSION['nome'] = $result['nome'];
-    header('Location:http://localhost:3000/HomeE');
+    header('Location:http://localhost:3000/HomeP');
     exit();
 } else {
     $_SESSION['nao_autenticado'] = true;
-    header('Location: l0gin1.php');
+    header('Location: loogin.php');
     exit();
 }
 ?>

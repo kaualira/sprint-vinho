@@ -75,11 +75,11 @@ include('verifica_login.php');
 
         // Conectar-se ao banco de dados SQLite
         $db = new SQLite3('login.db');
+// Obter o nome de usuário da sessão
+$nome = $_SESSION['nome'];
 
-
-        // Execute a consulta para buscar os dados
-        $results = $db->query('SELECT nome, contato, cpfecnpj, datanascimento, genero FROM loogin');
-        $row = $results->fetchArray();
+// Execute a consulta para buscar os dados do usuário logado
+$results = $db->query("SELECT nome, contato, cpfecnpj, datanascimento, genero FROM loogin WHERE nome = '$nome'");
 
         echo "<form action='' method='POST'>";
 

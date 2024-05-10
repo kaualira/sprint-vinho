@@ -10,6 +10,8 @@ import LogF from './LogF';
 import HoP from './HoP';
 // import Vin from './Vin';
 import Prod from './Prod';
+import HoE from './HoE';
+
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
           <Route path="/LoginP" element={<><LogP /></>}/>
           <Route path="/LoginF" element={<><LogF /></>}/>
           <Route path="/HomeP" element={<><HoP /></>}/>
+          <Route path="/HomeE" element={<><HoE /></>}/>
           <Route path='/Produtos' element={<><Prod /></>}/>
+         
         </Routes>
     </div>
   );

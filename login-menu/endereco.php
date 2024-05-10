@@ -77,11 +77,12 @@ include_once("navbar.php")
 
         // Conectar-se ao banco de dados SQLite
         $db = new SQLite3('login.db');
-
+// Obter o nome de usuário da sessão
+$nome = $_SESSION['nome'];
 
         // Execute a consulta para buscar os dados
-        $results = $db->query('SELECT cidade, rua, numero, complemento FROM loogin');
-        $row = $results->fetchArray();
+        $results = $db->query("SELECT cidade, rua, numero, complemento, genero FROM loogin WHERE nome = '$nome'");
+        
 
         echo "<form action='atualizarperfil.php' method='POST'>";
 
