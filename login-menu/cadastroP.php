@@ -24,7 +24,7 @@
             <p class='p1'>cadastro pessoal</p>
             <p class='p2'>Já está cadastrado em</p>
             <p class='p2'>nosso sistema?</p>
-            <a href="l0gin1.php"><p class='p3'>ENTRE AQUI!</p></a>
+            <a href="loogin.php"><p class='p3'>ENTRE AQUI!</p></a>
         </div>
   
         <div class='dados'>

@@ -22,7 +22,7 @@ $row_check_user = $stmt_check_user->fetch(PDO::FETCH_ASSOC);
 
 if ($row_check_user['total'] == 1) {
     $_SESSION['usuario_existe'] = true;
-    header('Location: cadastroP.php');
+    header('Location: http://localhost:3000/HomeE');
     exit;
 }
 
