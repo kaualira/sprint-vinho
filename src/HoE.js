@@ -44,8 +44,10 @@ function HoE () {
             autoPlay
             infiniteLoop
             centerMode
-            interval={3000}
-            showThumbs={false} // Esta propriedade remove as miniaturas
+            interval={2000}
+            showThumbs={false}
+            showIndicators={false}
+            showArrows={false} // Esta propriedade remove as miniaturas
             
           >
             {images.map((image) => (
