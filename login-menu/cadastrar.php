@@ -22,7 +22,7 @@ $row_check_user = $stmt_check_user->fetch(PDO::FETCH_ASSOC);
 
 if ($row_check_user['total'] == 1) {
     $_SESSION['usuario_existe'] = true;
-    header('Location: cadastro.php');
+    header('Location: cadastroP.php');
     exit;
 }
 
@@ -46,6 +46,6 @@ if ($stmt_insert_user->execute()) {
     echo "Error: " . $sql_insert_user . "<br>" . $stmt_insert_user->errorInfo();
 }
 
-header('Location: cadastro.php');
+header('Location: cadastroP.php');
 exit;
 ?>

@@ -149,12 +149,12 @@ font-size:18px;
   margin-right: 10px; 
 }
 .visa-image {
-    margin-left:10px;
-    width: 100px; 
-    height: auto; 
-    border-radius: 10px; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
-  
+  margin-left:10px;
+  width: 20%; /* Defina a largura desejada */
+  height: 10%; /* Mantém a proporção original da imagem */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+
 }
 
 .d1{
@@ -165,15 +165,20 @@ background-color: #442C0F;
 width: 550px;
 border-radius: 15px; 
 }
+
 .d1 p{
-    margin-left:10px;
+    margin-left:30px;
     color:#E5D6CB; 
      font-family: "Poppins", sans-serif;
     font-weight: 400;
     text-decoration: none;
     font-size: 120%;
     margin-bottom: 10%;
-    margin-right: 8%; 
+    margin-right: 5%; 
+    text-align: center;
+    line-height: 70px; 
+    height: 10px; 
+    margin-left: 6%;
     
 }
 .mars{
@@ -190,7 +195,7 @@ width:80%;
 border-radius: 6px;
 height:30px;
 font-family: "Poppins", sans-serif;
-font-size:12px;
+font-size:15px;
 font-weight: 300;
 font-style: normal;
 border:none;
